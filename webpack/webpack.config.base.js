@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const paths = {
   'assets': path.resolve(__dirname, '../dist/assets'),
@@ -18,12 +19,12 @@ module.exports = function () {
       rules: [
         {
           enforce: 'pre',
-          test: /\.js$/,
+          test: /\.(jsx|js)$/,
           exclude: /node_modules/,
           use: ['eslint-loader']
         },
         {
-          test: /\.js$/,
+          test: /\.(jsx|js)$/,
           exclude: /node_modules/,
           use: [
             {
@@ -69,6 +70,13 @@ module.exports = function () {
           ]
         }
       ]
-    }
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: '../src/index.html',
+        filename: '../index.html',
+        inject: 'body'
+      })
+    ]
   };
 };
