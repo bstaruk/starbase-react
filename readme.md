@@ -41,7 +41,7 @@ Starbase-react uses [webpack-dev-server](https://github.com/webpack/webpack-dev-
 After running `npm run watch` in the project root, your `/src` code will be served at the url above and watched for changes. As you modify code in `/src`, the project will be recompiled and your browser will refresh to show the latest changes.
 
 ```
-cd /path/to/starbase
+cd /path/to/starbase-react
 npm run watch
 ```
 
@@ -51,7 +51,7 @@ Use `npm run build` in your project root to run a production build.
 Production builds compile & minify your assets into `/dist` for distribution and/or integration into whatever codebase you'll be using these assets in.
 
 ```
-cd /path/to/starbase
+cd /path/to/starbase-react
 npm run build
 ```
 
