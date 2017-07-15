@@ -1,10 +1,29 @@
 {
-  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "rules": {
-    "comma-dangle": [1, "never"], // disallow trailing commas
-    "no-trailing-spaces": 1, // disallow trailing whitespace at the end of lines
-    "no-unused-vars": 1, // disallow declaration of variables that are not used in the code
-    "no-var": 1, // require let or const instead of var
-    "strict": 0 // disable strict mode
+    "comma-dangle": [1, "never"],
+    "no-trailing-spaces": 1,
+    "no-unused-vars": 1,
+    "no-var": 1,
+    "strict": 0
   }
 }
