@@ -6,7 +6,7 @@ import About from '../../views/About.jsx';
 export default class Main extends React.Component {
   render() {
     return (
-      <main>
+      <main id="content" className="wrapper">
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
