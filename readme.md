@@ -9,7 +9,7 @@ Starbase-react is a React, Webpack 3 & PostCSS boilerplate that utilizes some of
 * [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg)
 * [Webpack 3](https://github.com/webpack/webpack)
 * [Babel](https://github.com/babel/babel) (ES6) w/ [ESLint](https://github.com/eslint/eslint)
-* [PostCSS](https://github.com/postcss/postcss) w/ [cssnext](https://github.com/MoOx/postcss-cssnext), [stylelint](https://github.com/stylelint/stylelint), [cssnano](https://github.com/ben-eb/cssnano) & [MQPacker](https://github.com/hail2u/node-css-mqpacker)
+* [PostCSS](https://github.com/postcss/postcss) w/ [cssnext](https://github.com/MoOx/postcss-cssnext), [PostCSS Nested](https://github.com/postcss/postcss-nested), [stylelint](https://github.com/stylelint/stylelint), [cssnano](https://github.com/ben-eb/cssnano) & [MQPacker](https://github.com/hail2u/node-css-mqpacker)
 * ...and more!
 
 Starbase-react is a variant of [Starbase](https://github.com/bstaruk/starbase) (from the same developer), and is intended to be small in scope so that it can be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with Webpack 3 and React.
