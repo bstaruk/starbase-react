@@ -3,15 +3,15 @@ import { Switch, Route } from 'react-router-dom'
 import Home from '../../views/Home.jsx';
 import About from '../../views/About.jsx';
 
-export default class Main extends React.Component {
-  render() {
-    return (
-      <main id="content" className="wrapper">
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-        </Switch>
-      </main>
-    );
-  }
-}
+const Main = () => {
+  return (
+    <main id="content" className="wrapper">
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
+      </Switch>
+    </main>
+  )
+};
+
+export default Main;
