@@ -1,4 +1,10 @@
 #header {
+  & > img {
+    float: left;
+    margin-right: 0.5em;
+    max-height: 2.75em;
+  }
+
   & > h1 {
     margin-top: 0;
   }
