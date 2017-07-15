@@ -11,6 +11,7 @@
 Starbase-react is a variant of Starbase (from the same developer) that has all of the above, and more:
  
  * [React](https://facebook.github.io/react/) w/ JSX
+ * [React-Router 4](https://github.com/ReactTraining/react-router)
  * [Webpack Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html)
  * [React Hot Loader 3](https://github.com/gaearon/react-hot-loader)
 
