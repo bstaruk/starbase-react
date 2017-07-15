@@ -49,6 +49,7 @@ module.exports = function () {
       ]
     },
     devServer: {
+      historyApiFallback: true,
       contentBase: paths.src,
       port: 8080,
       watchOptions: {
