@@ -56,7 +56,6 @@
     "postcss-nested": "^2.0.4",
     "postcss-remove-root": "^0.0.2",
     "postcss-reporter": "^4.0.0",
-    "prop-types": "^15.5.10",
     "react-hot-loader": "next",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
@@ -69,6 +68,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.1"
