@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const paths = {
-  'assets': path.resolve(__dirname, '../dist/assets'),
+  'dist': path.resolve(__dirname, '../dist'),
   'src': path.resolve(__dirname, '../src')
 };
 
@@ -17,7 +17,7 @@ module.exports = function () {
     },
     output: {
       filename: '[name].bundle.js',
-      path: paths.assets
+      path: paths.dist
     },
     module: {
       rules: [
@@ -79,7 +79,7 @@ module.exports = function () {
       new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
         template: '../src/index.html',
-        filename: '../index.html',
+        filename: 'index.html',
         inject: false
       })
     ]

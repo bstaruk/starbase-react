@@ -9,7 +9,7 @@ const paths = {
 module.exports = function () {
   return webpackMerge(webpackConfigBase(), {
     output: {
-      publicPath: '/assets'
+      publicPath: '/'
     },
     module: {
       rules: [
