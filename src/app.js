@@ -1,3 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader'
+import { BrowserRouter } from 'react-router-dom'
+import App from './components/App.jsx';
+
 // promise & fetch polyfills
 require('es6-promise').polyfill();
 require('whatwg-fetch');
@@ -5,10 +11,25 @@ require('whatwg-fetch');
 // base styles
 require('./styles/app.css');
 
-// components styles
+// component styles
 require.context('./components/', true, /\.css$/);
 
-// button component
-const Button = require('./components/button/Button');
-const buttonEl = document.getElementsByClassName('button');
-buttonEl && new Button({el: buttonEl});
+// react app
+const render = () => {
+  ReactDOM.render(
+    <AppContainer>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AppContainer>,
+    document.getElementById('root')
+  )
+};
+
+render(App);
+
+if (module.hot) {
+  module.hot.accept('./components/App.jsx', () => {
+    render(App)
+  })
+}

@@ -10,12 +10,12 @@
   border-radius: 3px;
   transition: all 0.3s ease;
 
-  &:hover {
-    background-color: #e5e5e5;
+  &--on {
+    transform: rotate(-360deg);
   }
 
-  &.hit {
-    transform: rotate(-360deg);
+  &:hover {
+    background-color: #e5e5e5;
   }
 
   @media (--medium) {

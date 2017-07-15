@@ -1,19 +1,14 @@
 const webpackMerge = require('webpack-merge');
 const webpackConfigBase = require('./webpack.config.base.js');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 const paths = {
-  'base': path.resolve(__dirname, '../'),
-  'static': path.resolve(__dirname, '../src/static')
+  'base': path.resolve(__dirname, '../')
 };
 
 module.exports = function() {
   return webpackMerge(webpackConfigBase(), {
-    output: {
-      publicPath: './'
-    },
     module: {
       rules: [
         {
@@ -37,6 +32,7 @@ module.exports = function() {
                           }
                         }
                       }),
+                      require('postcss-nested'),
                       require('postcss-remove-root'),
                       require('css-mqpacker')({
                         sort: true
@@ -56,13 +52,6 @@ module.exports = function() {
     },
     plugins: [
       new ExtractTextPlugin('[name].bundle.css'),
-      new CopyWebpackPlugin([
-        {
-          context: paths.static,
-          to: '../',
-          from: '**/**'
-        }
-      ]),
       new CleanWebpackPlugin(['dist'], { root: paths.base })
     ]
   })

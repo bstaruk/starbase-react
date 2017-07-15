@@ -18,3 +18,12 @@ input,
 button {
   font-family: var(--font-sans);
 }
+
+.wrapper {
+  max-width: 62rem;
+  margin: 0 0 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

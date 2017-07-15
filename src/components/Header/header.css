@@ -1,0 +1,33 @@
+#header {
+  & > img {
+    float: left;
+    margin-right: 0.5em;
+    max-height: 2.75em;
+  }
+
+  & > h1 {
+    margin-top: 0;
+  }
+}
+
+#nav {
+  & > ul {
+    padding-left: 0;
+
+    & > li {
+      display: inline-block;
+      margin-right: 1rem;
+
+      &::after {
+        content: "|";
+        padding-left: 1rem;
+      }
+
+      &:last-of-type {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

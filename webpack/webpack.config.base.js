@@ -1,6 +1,8 @@
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const paths = {
-  'assets': path.resolve(__dirname, '../dist/assets'),
+  'dist': path.resolve(__dirname, '../dist'),
   'src': path.resolve(__dirname, '../src')
 };
 
@@ -8,22 +10,25 @@ module.exports = function () {
   return {
     context: paths.src,
     entry: {
-      app: ['./app.js']
+      app: [
+        'react-hot-loader/patch',
+        './app.js'
+      ]
     },
     output: {
       filename: '[name].bundle.js',
-      path: paths.assets
+      path: paths.dist
     },
     module: {
       rules: [
         {
           enforce: 'pre',
-          test: /\.js$/,
+          test: /\.(jsx|js)$/,
           exclude: /node_modules/,
           use: ['eslint-loader']
         },
         {
-          test: /\.js$/,
+          test: /\.(jsx|js)$/,
           exclude: /node_modules/,
           use: [
             {
@@ -69,6 +74,14 @@ module.exports = function () {
           ]
         }
       ]
-    }
+    },
+    plugins: [
+      new webpack.HotModuleReplacementPlugin(),
+      new HtmlWebpackPlugin({
+        template: '../src/index.html',
+        filename: 'index.html',
+        inject: false
+      })
+    ]
   };
 };
