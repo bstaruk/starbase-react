@@ -21,9 +21,7 @@ class Button extends React.Component {
 
   render() {
     return (
-      <span>
-        <button onClick={this.handleClick} className={`button button--${this.state.isToggleOn ? 'on' : 'off'}`}>hit me!</button>
-      </span>
+      <button onClick={this.handleClick} className={`button button--${this.state.isToggleOn ? 'on' : 'off'}`}>hit me!</button>
     )
   }
 }
