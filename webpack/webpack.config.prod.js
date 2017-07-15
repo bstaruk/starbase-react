@@ -1,6 +1,11 @@
 const webpackMerge = require('webpack-merge');
 const webpackConfigBase = require('./webpack.config.base.js');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require('path');
+const paths = {
+  'base': path.resolve(__dirname, '../')
+};
 
 module.exports = function() {
   return webpackMerge(webpackConfigBase(), {
@@ -49,6 +54,7 @@ module.exports = function() {
     },
     plugins: [
       new ExtractTextPlugin('[name].bundle.css'),
+      new CleanWebpackPlugin(['dist'], { root: paths.base })
     ]
   })
 };
