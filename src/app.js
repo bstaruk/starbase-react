@@ -11,7 +11,10 @@ require('whatwg-fetch');
 // base styles
 require('./styles/app.css');
 
-// react
+// component styles
+require.context('./components/', true, /\.css$/);
+
+// react app
 const render = () => {
   ReactDOM.render(
     <AppContainer>
@@ -26,5 +29,7 @@ const render = () => {
 render(App);
 
 if (module.hot) {
-  module.hot.accept('./components/App.jsx', () => { render(App) })
+  module.hot.accept('./components/App.jsx', () => {
+    render(App)
+  })
 }

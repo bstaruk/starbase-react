@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 export default class Header extends React.Component {
   render() {
     return (
-      <header>
+      <header id="header">
         <h1>starbase-react</h1>
-        <nav>
+        <nav id="nav">
           <ul>
             <li><Link to='/'>home</Link></li>
             <li><Link to='/about'>about</Link></li>
