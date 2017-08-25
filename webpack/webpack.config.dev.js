@@ -1,10 +1,7 @@
 const webpackMerge = require('webpack-merge');
 const webpackConfigBase = require('./webpack.config.base.js');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const path = require('path');
-const paths = {
-  'src': path.resolve(__dirname, '../src')
-};
+const pathsHelper = require('./lib/paths-helper');
 
 module.exports = function () {
   return webpackMerge(webpackConfigBase(), {
@@ -51,7 +48,7 @@ module.exports = function () {
     },
     devServer: {
       historyApiFallback: true,
-      contentBase: paths.src,
+      contentBase: pathsHelper('src'),
       port: 8080,
       watchOptions: {
         poll: 1000

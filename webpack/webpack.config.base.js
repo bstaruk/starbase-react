@@ -1,14 +1,11 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const paths = {
-  'dist': path.resolve(__dirname, '../dist'),
-  'src': path.resolve(__dirname, '../src')
-};
+const pathsHelper = require('./lib/paths-helper');
 
 module.exports = function () {
   return {
-    context: paths.src,
+    context: pathsHelper('src'),
     entry: {
       app: [
         'react-hot-loader/patch',
@@ -17,7 +14,12 @@ module.exports = function () {
     },
     output: {
       filename: '[name].bundle.js',
-      path: paths.dist
+      path: pathsHelper('dist')
+    },
+    resolveLoader: {
+      alias: {
+        'css-prefix-variables': path.resolve(__dirname, './lib/css-prefix-variables.js')
+      }
     },
     module: {
       rules: [
@@ -26,6 +28,21 @@ module.exports = function () {
           test: /\.(jsx|js)$/,
           exclude: /node_modules/,
           use: ['eslint-loader']
+        },
+        {
+          enforce: 'pre',
+          test: /\.css$/,
+          include: [
+            pathsHelper('components')
+          ],
+          use: [
+            {
+              loader: 'css-prefix-variables',
+              options: {
+                path: pathsHelper('variables')
+              }
+            }
+          ]
         },
         {
           test: /\.(jsx|js)$/,

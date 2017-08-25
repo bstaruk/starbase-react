@@ -1,14 +1,12 @@
-@import '../../styles/variables.css';
-
 .button {
   background-color: #efefef;
   color: var(--body-font-color);
   border: 1px solid #ddd;
-  padding: 1em;
+  padding: 0.75rem;
   cursor: pointer;
   outline: none;
   border-radius: 3px;
-  transition: all 0.3s ease;
+  transition: all 250ms ease;
 
   &--on {
     transform: rotate(-360deg);
@@ -19,6 +17,6 @@
   }
 
   @media (--medium) {
-    padding: 1.2em;
+    padding: 1rem;
   }
 }
