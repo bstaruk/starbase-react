@@ -1,11 +1,12 @@
 #header {
-  & > img {
+  & img {
     float: left;
-    margin-right: 0.5em;
-    max-height: 2.75em;
+    margin-right: 0.5rem;
+    max-height: 2.5rem;
   }
 
-  & > h1 {
+  & h1 {
+    font-family: var(--font-serif);
     margin-top: 0;
   }
 }
