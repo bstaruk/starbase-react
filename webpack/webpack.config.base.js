@@ -33,6 +33,7 @@ module.exports = function () {
           enforce: 'pre',
           test: /\.css$/,
           include: [
+            pathsHelper('app'),
             pathsHelper('components')
           ],
           use: [
