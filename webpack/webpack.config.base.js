@@ -9,7 +9,7 @@ module.exports = function () {
     entry: {
       app: [
         'react-hot-loader/patch',
-        './app.js'
+        './bundle.js'
       ]
     },
     output: {
@@ -33,6 +33,7 @@ module.exports = function () {
           enforce: 'pre',
           test: /\.css$/,
           include: [
+            pathsHelper('app'),
             pathsHelper('components')
           ],
           use: [
