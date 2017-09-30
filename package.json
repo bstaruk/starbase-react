@@ -9,7 +9,7 @@
       "url": "https://brian.staruk.me"
     }
   ],
-  "description": "a react boilerplate w/ webpack 3, eslint, postcss, cssnext, stylelint & more",
+  "description": "a react 16 boilerplate w/ webpack 3, eslint, postcss, cssnext, stylelint & more",
   "homepage": "https://github.com/bstaruk/starbase-react",
   "repository": {
     "type": "git",
