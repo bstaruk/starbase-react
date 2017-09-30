@@ -1,8 +1,8 @@
 # starbase-react
 
-Starbase-react is a React, Webpack 3 & PostCSS boilerplate that utilizes some of the juiciest open source tools around:
+Starbase-react is a React 16, Webpack 3 & PostCSS boilerplate that utilizes some of the juiciest open source tools around:
 
-* [React](https://facebook.github.io/react/) w/ JSX
+* [React 16](https://facebook.github.io/react/) w/ JSX
 * [React Router 4](https://github.com/ReactTraining/react-router)
 * [React Hot Loader 3](https://github.com/gaearon/react-hot-loader)
 * [Webpack Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html)
@@ -17,7 +17,7 @@ Starbase-react is a React, Webpack 3 & PostCSS boilerplate that utilizes some of
   * [MQPacker](https://github.com/hail2u/node-css-mqpacker)
 * ...and more!
 
-Starbase-react is a variant of [Starbase](https://github.com/bstaruk/starbase) (from the same developer), and is intended to be small in scope so that it may be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with Webpack 3 and React.
+Starbase-react is a variant of [Starbase](https://github.com/bstaruk/starbase) (from the same developer), and is intended to be small in scope so that it may be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with Webpack 3 and React 16.
 
 ## license
 
