@@ -48,16 +48,7 @@ module.exports = function () {
         {
           test: /\.(jsx|js)$/,
           exclude: /node_modules/,
-          use: [
-            {
-              loader: 'babel-loader',
-              options: {
-                presets: [
-                  ['es2015', {'loose': true, 'modules': false}],
-                ]
-              }
-            }
-          ]
+          use: ['babel-loader']
         },
         {
           test: /\.(png|jpg|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
