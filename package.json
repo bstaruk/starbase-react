@@ -1,6 +1,6 @@
 {
   "name": "starbase-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Brian Staruk <brian@staruk.me>",
   "contributors": [
     {
@@ -20,7 +20,7 @@
     "email": "brian@staruk.me"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8.9"
   },
   "main": "index.js",
   "scripts": {
