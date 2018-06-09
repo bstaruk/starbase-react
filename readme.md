@@ -5,7 +5,7 @@
 [![dependencies status](https://david-dm.org/bstaruk/starbase-react/status.svg)](https://david-dm.org/bstaruk/starbase-react)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react?ref=badge_shield)
 
-starbase-react is an offline-first React boilerplate that is built with webpack 4, PostCSS & Babel (ES6+). Get up and running in minutes using some of the most powerful front-end tools available in 2018:
+starbase-react is an offline-first React 16 boilerplate that is built with webpack 4, PostCSS & Babel (ES6+). Get up and running in minutes using some of the most powerful front-end tools available in 2018:
 
 * [React 16](https://facebook.github.io/react/) w/ JSX
 * [React Router 4](https://github.com/ReactTraining/react-router)
