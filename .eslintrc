@@ -11,7 +11,8 @@
     "linebreak-style": 0,
     "max-len": 0,
     "no-new": 0,
-    "no-plusplus": 0
+    "no-plusplus": 0,
+    "no-use-before-define": 0
   },
   "globals": {
     "document": true,

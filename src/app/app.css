@@ -3,10 +3,18 @@
   but most of your css should live in ../components
  */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  max-width: var(--body-width-max);
   background-color: var(--body-bg-color);
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: var(--body-font-size);
+  font-range: var(--body-font-range);
+  letter-spacing: 0.02rem;
+  line-height: 1.25;
   color: var(--body-font-color);
   padding: 1rem;
   margin: 0;
@@ -14,19 +22,14 @@ body {
 
 a {
   color: var(--anchor-font-color);
-  transition: color 250ms ease;
+  transition: color 200ms ease;
+
+  &:hover {
+    color: var(--anchor-hover-font-color);
+  }
 }
 
 input,
 button {
   font-family: var(--font-sans);
-}
-
-.wrapper {
-  max-width: 62rem;
-  margin: 0 0 2rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }

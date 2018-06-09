@@ -1,19 +1,17 @@
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const pathsHelper = require('./lib/paths-helper');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  context: pathsHelper('src'),
+  context: path.resolve(__dirname, '../src'),
   entry: {
     app: [
       'react-hot-loader/patch',
-      './bundle.jsx'
+      './app.jsx'
     ]
   },
   output: {
-    filename: '[name].bundle.js',
-    path: pathsHelper('dist')
+    path: path.resolve(__dirname, '../dist')
   },
   resolveLoader: {
     alias: {
@@ -32,14 +30,14 @@ module.exports = {
         enforce: 'pre',
         test: /\.css$/,
         include: [
-          pathsHelper('app'),
-          pathsHelper('components')
+          path.resolve(__dirname, '../src/app'),
+          path.resolve(__dirname, '../src/components')
         ],
         use: [
           {
             loader: 'css-prefix-variables',
             options: {
-              path: pathsHelper('variables')
+              path: path.resolve(__dirname, '../src/variables/variables.css')
             }
           }
         ]
@@ -50,13 +48,24 @@ module.exports = {
         use: ['babel-loader']
       },
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              minimize: true
+            }
+          }
+        ]
+      },
+      {
         test: /\.(png|jpg|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [
           {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: 'images/[name].[ext]'
+              name: 'images/[name].[md5:hash:hex:8].[ext]'
             }
           }
         ]
@@ -68,23 +77,30 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: 'fonts/[name].[ext]'
+              name: 'fonts/[name].[md5:hash:hex:8].[ext]'
             }
           }
         ]
       },
       {
         test: /\.(mp4|ogg|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: ['file-loader']
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/[name].[md5:hash:hex:8].[ext]'
+            }
+          }
+        ]
       }
     ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: '../src/index.html',
+      template: path.resolve(__dirname, '../src/templates/index.html'),
       filename: 'index.html',
-      inject: false
+      favicon: path.resolve(__dirname, '../src/templates/images/favicon.png')
     })
   ]
 };
