@@ -26,11 +26,10 @@ Harness the power of [React 16](https://facebook.github.io/react/) w/ JSX, [Babe
 #### _linting w/ eslint and stylelint_
 Industry-standard linting comes enabled and configured by default. [ESLint](https://github.com/eslint/eslint) (with [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)) is used for your React & ES/JS, and [stylelint](https://github.com/stylelint/stylelint) for your PostCSS.
 
-#### _node & yarn_
-The latest versions of [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg) are continually tested to ensure that starbase-react _just works_.
+#### _small in scope & constantly updated_
+This boilerplate is kept pretty simple, by design, so that updates can be easily rolled out to the core technologies (React, webpack, etc).
 
-#### _up to date & easy to use_
-This boilerplate is kept pretty simple, by design, so that updates can be easily rolled out to the core technologies (React, webpack, etc). New versions are tested and applied rapidly so that you can always rely on starbase-react being a useful tool for new projects.
+The latest versions of all dependencies (including [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg)) are tested and applied regularly so that you can always rely on starbase-react being a useful tool for new projects.
 
 Keeping the project relatively small in scope also makes it easier to extend and customize, or use as a learning tool for folks who are trying to become familiar with React 16, webpack 4, PostCSS and/or ES6+.
 
