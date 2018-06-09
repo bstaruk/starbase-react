@@ -1,6 +1,6 @@
 {
-  "name": "starbase-react-skunkworks",
-  "version": "1.2.1",
+  "name": "starbase-react",
+  "version": "1.0.0",
   "author": "Brian Staruk <brian@staruk.me>",
   "contributors": [
     {
@@ -9,14 +9,14 @@
       "url": "https://brian.staruk.me"
     }
   ],
-  "description": "an offline-first web app boilerplate w/ webpack 4, PostCSS, Babel (ES6+) & more",
-  "homepage": "https://github.com/bstaruk/starbase",
+  "description": "an offline-first React 16 boilerplate w/ webpack 4, ESLint, PostCSS, cssnext, stylelint & more",
+  "homepage": "https://github.com/bstaruk/starbase-react",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bstaruk/starbase.git"
+    "url": "https://github.com/bstaruk/starbase-react.git"
   },
   "bugs": {
-    "url": "https://github.com/bstaruk/starbase/issues",
+    "url": "https://github.com/bstaruk/starbase-react/issues",
     "email": "brian@staruk.me"
   },
   "engines": {
