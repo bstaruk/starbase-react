@@ -1,7 +1,7 @@
+const path = require('path');
 const webpackMerge = require('webpack-merge');
 const webpackConfigBase = require('./webpack.config.base.js');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const pathsHelper = require('./lib/paths-helper');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // postcss plugins
 const postcssImport = require('postcss-import');
@@ -10,51 +10,53 @@ const postcssReporter = require('postcss-reporter');
 const postcssCssnext = require('postcss-cssnext');
 const postcssNested = require('postcss-nested');
 const postcssRemoveRoot = require('postcss-remove-root');
+const postcssResponsiveType = require('postcss-responsive-type');
+const postcssExtend = require('postcss-extend');
 const cssMqpacker = require('css-mqpacker');
 
 module.exports = webpackMerge(webpackConfigBase, {
   output: {
-    publicPath: '/'
+    filename: '[name].js'
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            'css-loader',
-            {
-              loader: 'postcss-loader',
-              options: {
-                sourceMap: 'inline',
-                plugins: () => [
-                  postcssImport,
-                  stylelint(),
-                  postcssReporter(),
-                  postcssCssnext({
-                    features: {
-                      autoprefixer: {
-                        grid: false
-                      }
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: 'inline',
+              plugins: () => [
+                stylelint(),
+                postcssReporter(),
+                postcssImport(),
+                postcssNested(),
+                postcssCssnext({
+                  features: {
+                    autoprefixer: {
+                      grid: false
                     }
-                  }),
-                  postcssNested,
-                  postcssRemoveRoot,
-                  cssMqpacker({
-                    sort: true
-                  })
-                ]
-              }
+                  }
+                }),
+                postcssResponsiveType(),
+                postcssExtend(),
+                postcssRemoveRoot(),
+                cssMqpacker({
+                  sort: true
+                })
+              ]
             }
-          ]
-        })
+          }
+        ]
       }
     ]
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: pathsHelper('src'),
+    contentBase: path.resolve(__dirname, '../dist'),
     port: 8080,
     watchOptions: {
       poll: 1000
@@ -64,6 +66,9 @@ module.exports = webpackMerge(webpackConfigBase, {
     }
   },
   plugins: [
-    new ExtractTextPlugin('[name].bundle.css')
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css'
+    })
   ]
 });
