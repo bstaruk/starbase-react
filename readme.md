@@ -14,7 +14,7 @@ Harness the power of [React 16](https://facebook.github.io/react/) w/ JSX, [Babe
 [starbase](https://github.com/bstaruk) was built first as a [webpack 4](https://github.com/webpack/webpack) & [webpack-dev-server](https://github.com/webpack/webpack-dev-server) boilerplate, with advanced features like [Webpack Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html) and [offline-plugin](https://github.com/NekR/offline-plugin) supported by default. starbase-react just puts a spin on things.
 
 #### _postcss, cssnext and more!_
-[PostCSS](https://github.com/postcss/postcss) is the way to go, and starbase-react embraces the future of CSS development. Out of the box, your PostCSS syntax will be compiled with a few baseline plugins:
+[PostCSS](https://github.com/postcss/postcss) is the way to go and starbase-react embraces the future of CSS development. Your PostCSS syntax will be compiled with a few baseline plugins:
 
 * [cssnano](https://github.com/ben-eb/cssnano)
 * [cssnext](https://github.com/MoOx/postcss-cssnext)
@@ -24,7 +24,7 @@ Harness the power of [React 16](https://facebook.github.io/react/) w/ JSX, [Babe
 * [MQPacker](https://github.com/hail2u/node-css-mqpacker)
 
 #### _linting w/ eslint and stylelint_
-Industry standard linting comes enabled and configured by default. [ESLint](https://github.com/eslint/eslint) is used for your React & ES/JS, and [stylelint](https://github.com/stylelint/stylelint) for your PostCSS.
+Industry-standard linting comes enabled and configured by default. [ESLint](https://github.com/eslint/eslint) (with [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)) is used for your React & ES/JS, and [stylelint](https://github.com/stylelint/stylelint) for your PostCSS.
 
 #### _node & yarn_
 The latest versions of [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg) are continually tested to ensure that starbase-react _just works_.
