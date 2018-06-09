@@ -1,4 +1,6 @@
 # starbase-react
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react?ref=badge_shield)
+
 
 Starbase-react is a React 16, Webpack 3 & PostCSS boilerplate that utilizes some of the juiciest open source tools around:
 
@@ -22,6 +24,9 @@ Starbase-react is a variant of [Starbase](https://github.com/bstaruk/starbase) (
 ## license
 
 Starbase is completely free, open source and public domain, so you are free to do whatever you wish with it -- commercially or personally. You can buy me a beer next time you're in Boston, star the project and tell a friend, or you can erase all signs of origin and tell your coworkers that you made it yourself. It's all good!
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react?ref=badge_large)
 
 ## getting started
 
