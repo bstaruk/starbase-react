@@ -7,13 +7,13 @@
 
 starbase-react is an offline-first React 16 boilerplate that is built with webpack 4, PostCSS & Babel (ES6+). Get up and running in minutes using some of the most powerful front-end tools available in 2018:
 
-#### react 16
+#### _react 16_
 Harness the power of [React 16](https://facebook.github.io/react/) w/ JSX, [Babel](https://github.com/babel/babel) (ES6+), [React Router 4](https://github.com/ReactTraining/react-router) with a few built-in views to get you started, and [React Hot Loader 3](https://github.com/gaearon/react-hot-loader) to recompile your code as you develop in real-time.
 
-#### webpack 4
+#### _webpack 4_
 [starbase](https://github.com/bstaruk) was built first as a [webpack 4](https://github.com/webpack/webpack) & [webpack-dev-server](https://github.com/webpack/webpack-dev-server) boilerplate, with advanced features like [Webpack Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html) and [offline-plugin](https://github.com/NekR/offline-plugin) supported by default. starbase-react just puts a spin on things.
 
-#### postcss, cssnext and more!
+#### _postcss, cssnext and more!_
 [PostCSS](https://github.com/postcss/postcss) is the way to go, and starbase-react embraces the future of CSS development. Out of the box, your PostCSS syntax will be compiled with a few baseline plugins:
 
 * [cssnano](https://github.com/ben-eb/cssnano)
@@ -23,13 +23,13 @@ Harness the power of [React 16](https://facebook.github.io/react/) w/ JSX, [Babe
 * [postcss-extend](https://github.com/travco/postcss-extend)
 * [MQPacker](https://github.com/hail2u/node-css-mqpacker)
 
-#### linting w/ eslint and stylelint
+#### _linting w/ eslint and stylelint_
 Industry standard linting comes enabled and configured by default. [ESLint](https://github.com/eslint/eslint) is used for your React & ES/JS, and [stylelint](https://github.com/stylelint/stylelint) for your PostCSS.
 
-#### node & yarn
+#### _node & yarn_
 The latest versions of [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg) are continually tested to ensure that starbase-react _just works_.
 
-#### always up to date, simple to learn
+#### _up to date & easy to use_
 This boilerplate is kept pretty simple, by design, so that updates can be easily rolled out to the core technologies (React, webpack, etc). New versions are tested and applied rapidly so that you can always rely on starbase-react being a useful tool for new projects.
 
 Keeping the project relatively small in scope also makes it easier to extend and customize, or use as a learning tool for folks who are trying to become familiar with React 16, webpack 4, PostCSS and/or ES6+.
