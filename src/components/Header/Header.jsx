@@ -11,7 +11,7 @@ const Header = ({
       <img src={logo} alt="starbase logo" className="header__image" />
       <h1 className="header__title">{title}</h1>
     </div>
-    <p>starbase is an open source webpack 4, Babel (ES6) &amp; PostCSS boilerplate for web developers, with a small footprint and plenty of room for cream and sugar-- make it your own!</p>
+    <p>starbase-react is an open source webpack 4, React 16 &amp; PostCSS boilerplate for web developers, with a small footprint and plenty of room for cream and sugar-- make it your own!</p>
   </header>
 );
 
