@@ -34,8 +34,8 @@ class Header extends React.Component {
                 handleClick={this.setActiveTab}
                 isActive={this.state.activeTab === '/'}
                 linkTo="/"
-                title="a brief history of starbase-- it's got electrolytes!"
-                label="why come?"
+                title="a brief history of starbase-react-- it's got electrolytes!"
+                label="Why it's here"
               />
             </li>
 
@@ -44,8 +44,8 @@ class Header extends React.Component {
                 handleClick={this.setActiveTab}
                 isActive={this.state.activeTab === '/what'}
                 linkTo="/what"
-                title="an overview of the starbase commands"
-                label="what does it do?"
+                title="an overview of the starbase-react commands"
+                label="What it does"
               />
             </li>
 
@@ -55,7 +55,7 @@ class Header extends React.Component {
                 isActive={this.state.activeTab === '/who'}
                 linkTo="/who"
                 title="free software is for you and me"
-                label="who is it for?"
+                label="Who it's for"
               />
             </li>
           </ul>
