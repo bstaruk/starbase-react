@@ -9,6 +9,7 @@
     "no-new": 0,
     "no-plusplus": 0,
     "no-use-before-define": 0,
+    "react/destructuring-assignment": 0,
     "react/jsx-one-expression-per-line": 0
   },
   "globals": {
