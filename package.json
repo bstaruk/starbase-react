@@ -2,11 +2,13 @@
     "name": "starbase-react",
     "version": "2.0.0",
     "author": "Brian Staruk <brian@staruk.me>",
-    "contributors": [{
-        "name": "Brian Staruk",
-        "email": "brian@staruk.me",
-        "url": "https://brian.staruk.me"
-    }],
+    "contributors": [
+        {
+            "name": "Brian Staruk",
+            "email": "brian@staruk.me",
+            "url": "https://brian.staruk.me"
+        }
+    ],
     "description": "an offline-first React 16 boilerplate w/ webpack 4, PostCSS, Babel 7 (ES6+) & more",
     "homepage": "https://github.com/bstaruk/starbase-react",
     "repository": {
@@ -30,6 +32,7 @@
     "devDependencies": {
         "@babel/core": "^7.2.2",
         "@babel/preset-env": "^7.3.1",
+        "@babel/preset-react": "^7.0.0",
         "babel-eslint": "^10.0.1",
         "babel-loader": "^8.0.5",
         "clean-webpack-plugin": "^1.0.1",
@@ -66,6 +69,11 @@
     },
     "dependencies": {
         "es6-promise": "^4.2.5",
+        "prop-types": "^15.6.2",
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1",
+        "react-hot-loader": "^4.6.5",
+        "react-router-dom": "^4.3.1",
         "whatwg-fetch": "^3.0.0"
     }
 }

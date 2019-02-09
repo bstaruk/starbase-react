@@ -3,14 +3,19 @@
   "extends": "airbnb",
   "rules": {
     "comma-dangle": ["error", "never"],
+    "import/extensions": 0,
     "linebreak-style": 0,
+    "max-len": 0,
     "no-new": 0,
     "no-plusplus": 0,
-    "no-use-before-define": 0
+    "no-use-before-define": 0,
+    "react/jsx-one-expression-per-line": 0
   },
   "globals": {
     "document": true,
     "window": true,
-    "location": true
+    "location": true,
+    "React": true,
+    "PropTypes": true
   }
 }

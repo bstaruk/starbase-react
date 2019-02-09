@@ -18,6 +18,7 @@ const webpackConfigBase = require('./webpack.config.base.js');
 module.exports = webpackMerge(webpackConfigBase, {
   devServer: {
     contentBase: path.resolve(__dirname, '../dist'),
+    historyApiFallback: true,
     port: 8080,
     stats: {
       children: false

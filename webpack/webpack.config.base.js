@@ -1,10 +1,14 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
   context: path.resolve(__dirname, '../src'),
   entry: {
-    app: ['./app.js']
+    app: [
+      'react-hot-loader/patch',
+      './app.jsx'
+    ]
   },
   output: {
     path: path.resolve(__dirname, '../dist')
@@ -12,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader']
       },
@@ -65,6 +69,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/templates/index.html'),
       filename: 'index.html',
