@@ -23,4 +23,10 @@
     letter-spacing: normal;
     margin: 0;
   }
+
+  &__link {
+    &--active {
+      font-weight: bold;
+    }
+  }
 }
