@@ -5,7 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
 
 // offline-plugin
-import './app/lib/offline-plugin';
+import './lib/offline-plugin';
 
 // app component
 import Main from './components/Main/Main.jsx';
@@ -13,15 +13,11 @@ import Main from './components/Main/Main.jsx';
 // remove .no-js from html tag
 document.querySelector('html').classList.remove('no-js');
 
-// fetch & promise polyfills
-require('es6-promise').polyfill();
-require('whatwg-fetch');
+// ordered css imports
+require('./lib/fonts/fonts.css');
+require('./components/Main/Main.css');
 
-// baseline app styles
-require('./app/fonts/fonts.css');
-require('./app/app.css');
-
-// components styles
+// import all other css
 require.context('./components/', true, /\.css$/);
 
 // react app

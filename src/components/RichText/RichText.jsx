@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Footer = ({
+const RichText = ({
   children
 }) => (
-  <footer role="contentinfo" className="footer">
+  <div className="rich-text">
     {children}
-  </footer>
+  </div>
 );
 
-Footer.propTypes = {
+RichText.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default Footer;
+export default RichText;

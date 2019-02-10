@@ -13,12 +13,16 @@ import Why from './views/Why.jsx';
 const Main = () => (
   <main>
     <Header title="starbase-react" />
+
     <Switch>
       <Route exact path="/" component={Why} />
       <Route path="/what" component={What} />
       <Route path="/who" component={Who} />
     </Switch>
-    <Footer />
+
+    <Footer>
+      <p>crafted in boston by <a href="https://brian.staruk.me" title="continue to brian.staruk.me" className="h-card">brian staruk</a> | <a href="https://github.com/bstaruk/starbase-react" title="learn more about starbase-react on github">starbase-react on github</a></p>
+    </Footer>
   </main>
 );
 

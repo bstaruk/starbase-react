@@ -10,7 +10,7 @@ class HeaderLink extends React.Component {
       <Link
         to={this.props.linkTo}
         title={this.props.title}
-        className={this.props.isActive ? 'header__nav--active' : ''}
+        className={this.props.isActive ? 'header__link header__link--active' : 'header__link'}
         onClick={this.handleClick}
       >
         {this.props.label}

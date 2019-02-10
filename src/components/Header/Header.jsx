@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import headerImg from './assets/starbase.png';
 import HeaderLink from './HeaderLink.jsx';
+
+import logo from './assets/starbase.png';
 
 class Header extends React.Component {
   constructor(props) {
@@ -20,39 +21,41 @@ class Header extends React.Component {
   render() {
     return (
       <header role="banner" className="header">
-        <img src={headerImg} alt="starbase logo" className="header__image" />
-        <h1 className="header__title">{this.props.title}</h1>
-        <p>starbase is an open source webpack 4, Babel (ES6) & PostCSS boilerplate for web developers, with a small footprint and plenty of room for cream and sugar-- make it your own!</p>
+        <div className="header__brand">
+          <img src={logo} alt="starbase logo" className="header__image" />
+          <h1 className="header__title">{this.props.title}</h1>
+        </div>
+        <p>starbase-react is an open source webpack 4, React 16 &amp; PostCSS boilerplate for web developers, with a small footprint and plenty of room for cream and sugar-- make it your own!</p>
 
         <nav>
           <ul role="tablist" className="header__nav">
-            <li role="presentation">
+            <li>
               <HeaderLink
                 handleClick={this.setActiveTab}
                 isActive={this.state.activeTab === '/'}
                 linkTo="/"
-                title="a brief history of starbase-- it's got electrolytes!"
-                label="why come?"
+                title="a brief history of starbase-react-- it's got electrolytes!"
+                label="Why it's here"
               />
             </li>
 
-            <li role="presentation">
+            <li>
               <HeaderLink
                 handleClick={this.setActiveTab}
                 isActive={this.state.activeTab === '/what'}
                 linkTo="/what"
-                title="an overview of the starbase commands"
-                label="what does it do?"
+                title="an overview of the starbase-react commands"
+                label="What it does"
               />
             </li>
 
-            <li role="presentation">
+            <li>
               <HeaderLink
                 handleClick={this.setActiveTab}
                 isActive={this.state.activeTab === '/who'}
                 linkTo="/who"
                 title="free software is for you and me"
-                label="who is it for?"
+                label="Who it's for"
               />
             </li>
           </ul>

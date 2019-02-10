@@ -4,15 +4,13 @@
   "rules": {
     "comma-dangle": ["error", "never"],
     "import/extensions": 0,
-    "jsx-a11y/anchor-is-valid": [ "error", {
-      "components": [ "Link" ],
-      "specialLink": [ "to" ]
-    }],
     "linebreak-style": 0,
     "max-len": 0,
     "no-new": 0,
     "no-plusplus": 0,
-    "no-use-before-define": 0
+    "no-use-before-define": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-one-expression-per-line": 0
   },
   "globals": {
     "document": true,
