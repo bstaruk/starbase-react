@@ -13,10 +13,6 @@ import Main from './components/Main/Main.jsx';
 // remove .no-js from html tag
 document.querySelector('html').classList.remove('no-js');
 
-// fetch & promise polyfills (comment-out if not needed)
-require('es6-promise').polyfill();
-require('whatwg-fetch');
-
 // ordered css imports
 require('./lib/fonts/fonts.css');
 require('./components/Main/Main.css');
