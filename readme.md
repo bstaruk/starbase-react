@@ -1,7 +1,6 @@
 # starbase-react
 
 [![npm version](https://badge.fury.io/js/starbase-react.svg)](https://badge.fury.io/js/starbase-react)
-[![build status](https://travis-ci.org/bstaruk/starbase-react.svg?branch=master)](https://travis-ci.org/bstaruk/starbase-react)
 [![dependencies status](https://david-dm.org/bstaruk/starbase-react/status.svg)](https://david-dm.org/bstaruk/starbase-react)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react?ref=badge_shield)
 
