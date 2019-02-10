@@ -19,7 +19,7 @@ starbase-react is an offline-first React 16 boilerplate that is built with webpa
   * [MQPacker](https://github.com/hail2u/node-css-mqpacker)
 * ...and more!
 
-starbase-react is intended to be relatively small in scope so that it may be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with webpack 4, PostCSS and/or ES6.
+starbase-react is a spin on [starbase](https://github.com/bstaruk/starbase), and intended to be relatively small in scope so that it may be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with React 16, webpack 4, PostCSS and/or ES6.
 
 ## license
 
