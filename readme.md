@@ -4,33 +4,21 @@
 [![dependencies status](https://david-dm.org/bstaruk/starbase-react/status.svg)](https://david-dm.org/bstaruk/starbase-react)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react?ref=badge_shield)
 
-starbase-react is an offline-first React 16 boilerplate that is built with webpack 4, PostCSS & Babel (ES6+). Get up and running in minutes using some of the most powerful front-end tools available in 2018:
+starbase-react is an offline-first web app boilerplate that is built with webpack 4, PostCSS & Babel 7. Get up and running in minutes using some of the most powerful front-end tools available in 2019:
 
-#### _react 16_
-Harness the power of [React 16](https://facebook.github.io/react/) w/ JSX, [Babel](https://github.com/babel/babel) (ES6+), [React Router 4](https://github.com/ReactTraining/react-router) with a few built-in views to get you started, and [React Hot Loader 3](https://github.com/gaearon/react-hot-loader) to recompile your code as you develop in real-time.
+* [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg)
+* [webpack 4](https://github.com/webpack/webpack) & [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+* [Babel 7](https://github.com/babel/babel) w/ [ESLint](https://github.com/eslint/eslint)
+* [PostCSS](https://github.com/postcss/postcss) w/
+  * [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env)
+  * [PostCSS Nested](https://github.com/postcss/postcss-nested)
+  * [postcss-extend](https://github.com/travco/postcss-extend)
+  * [stylelint](https://github.com/stylelint/stylelint)
+  * [cssnano](https://github.com/ben-eb/cssnano)
+  * [MQPacker](https://github.com/hail2u/node-css-mqpacker)
+* ...and more!
 
-#### _webpack 4_
-[starbase](https://github.com/bstaruk) was built first as a [webpack 4](https://github.com/webpack/webpack) & [webpack-dev-server](https://github.com/webpack/webpack-dev-server) boilerplate, with advanced features like [Webpack Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html) and [offline-plugin](https://github.com/NekR/offline-plugin) supported by default. starbase-react just puts a spin on things.
-
-#### _postcss, cssnext and more!_
-[PostCSS](https://github.com/postcss/postcss) is the way to go and starbase-react embraces the future of CSS development. Your PostCSS syntax will be compiled with a few baseline plugins:
-
-* [cssnano](https://github.com/ben-eb/cssnano)
-* [cssnext](https://github.com/MoOx/postcss-cssnext)
-* [PostCSS Nested](https://github.com/postcss/postcss-nested)
-* [PostCSS Responsive Type](https://github.com/seaneking/postcss-responsive-type)
-* [postcss-extend](https://github.com/travco/postcss-extend)
-* [MQPacker](https://github.com/hail2u/node-css-mqpacker)
-
-#### _linting w/ eslint and stylelint_
-Industry-standard linting comes enabled and configured by default. [ESLint](https://github.com/eslint/eslint) (with [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)) is used for your React & ES/JS, and [stylelint](https://github.com/stylelint/stylelint) for your PostCSS.
-
-#### _small in scope & constantly updated_
-This boilerplate is kept pretty simple, by design, so that updates can be easily rolled out to the core technologies (React, webpack, etc).
-
-The latest versions of all dependencies (including [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg)) are tested and applied regularly so that you can always rely on starbase-react being a useful tool for new projects.
-
-Keeping the project relatively small in scope also makes it easier to extend and customize, or use as a learning tool for folks who are trying to become familiar with React 16, webpack 4, PostCSS and/or ES6+.
+starbase-react is intended to be relatively small in scope so that it may be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with webpack 4, PostCSS and/or ES6.
 
 ## license
 
@@ -38,14 +26,12 @@ starbase-react is open source and free software, so you may to do whatever you w
 
 ## getting started
 
-After completing the steps below, you will be ready to begin using starbase:
+After completing the steps below, you will be ready to begin using starbase-react:
 
 1. Install [Node.js](https://nodejs.org) (latest LTS recommended)
-2. Install [Yarn](https://yarnpkg.com)
+2. (Optional) Install [Yarn](https://yarnpkg.com)
 3. Clone starbase-react into your project root directory
-4. Install dependencies by running `yarn` in your project root directory
-
-_Note: if you hate Yarn for some reason, you can skip Step 2 and use `npm install` instead  of `yarn` in Step 4._
+4. Install dependencies by running `npm install` in your project root directory (or `yarn` if you performed Step 2)
 
 ## building, watching & developing
 
@@ -53,11 +39,11 @@ _Note: if you hate Yarn for some reason, you can skip Step 2 and use `npm instal
 
 starbase-react uses [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to serve up your project at [http://localhost:8080](http://localhost:8080) for streamlined and convenient development.
 
-After running `npm run watch` in the project root, your `/src` code will be served at the url above and watched for changes. As you modify code in `/src`, the project will be recompiled and your browser will refresh to show the latest changes.
+After running `npm run dev` in the project root, your `/src` code will be served at the url above and watched for changes. As you modify code in `/src`, the project will be recompiled and your browser will refresh to show the latest changes.
 
 ```
-cd /path/to/starbase
-npm run watch
+cd /path/to/starbase-react
+npm run dev
 ```
 
 ### building for production
@@ -66,7 +52,7 @@ Use `npm run build` in your project root to run a production build.
 Production builds compile & minify your assets into `/dist` for distribution and/or integration into whatever codebase you'll be using these assets in.
 
 ```
-cd /path/to/starbase
+cd /path/to/starbase-react
 npm run build
 ```
 
@@ -95,12 +81,12 @@ Because starbase-react was built to accommodate ES6 & CommonJS (and not jQuery) 
 
 Fetch is supported in all modern browsers, but some old dogs still don't support it and that's what we need the [es6-promise](https://github.com/stefanpenner/es6-promise) & [whatwg-fetch](https://github.com/github/fetch) polyfills for.
 
+These polyfills come commented-out by default in `/src/app.js`, so they won't end up in your production code until you actually use fetch somewhere, at which time you should un-comment-out the polyfills.
+
 If you want to remove these for any reason, perform the following steps:
 
-1. run `yarn remove es6-promise whatwg-fetch` in the project root to remove the dependencies
+1. remove `es6-promise` & `whatwg-fetch` from `/package.json`
 2. remove the lines in `/src/app.js` that fall under the "fetch & promise polyfills" comment (it'll be obvious which ones)
-
-_Note: if you think you might use fetch in the future, comment-out the requires instead of deleting them. Commented-out code is not included in production builds._
 
 ## features you may want to customize
 
@@ -116,7 +102,7 @@ starbase-react enforces the [Airbnb JavaScript Style Guide](https://github.com/a
 
 1. in `/.eslintrc`, remove the line that says `extends`
 2. in `/package.json`, remove the `eslint-config-airbnb` dependency
-3. run `yarn` (or `npm update` if you hate yarn)
+3. run `npm updated` (or `yarn`)
 
 After completing the steps above, the only rules that eslint will enforce are the ones you define in the `rules` object in `/.eslintrc`.
 
@@ -128,7 +114,7 @@ Out of the box, starbase-react caches everything, because the project is less th
 
 [Service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers), by design, only function on secure (https) environments. There is no issue with running starbase-react on an http environment-- the service worker will simply not be utilized.
 
-You may see an info log entry in your console from `offline-plugin` while using the `watch` command, feel free to ignore this. `offline-plugin` is not utilized on the dev server because [it doesn't always play nice with `webpack-dev-server`](https://github.com/NekR/offline-plugin/issues/138). It is intentionally only utilized in production builds.
+You may see an info log entry in your console from `offline-plugin` while using the `dev` command, feel free to ignore this. `offline-plugin` is not utilized on the dev server because [it doesn't always play nice with `webpack-dev-server`](https://github.com/NekR/offline-plugin/issues/138). It is intentionally only utilized in production builds.
 
 #### to remove offline-plugin:
 
@@ -146,16 +132,6 @@ You can disable `offline-plugin` without deleting it from your codebase, so that
 1. in `/src/app.js`, comment-out the `import` statement that references `offline-plugin`
 
 ## features you may want to know about
-
-### global css variables
-
-starbase-react supports global CSS variables via the [:root](https://developer.mozilla.org/en-US/docs/Web/CSS/:root) pseudo-element, which can be found in `/src/variables/variables.css`. You can split your variables into multiple files, and just import them into `/src/variables/variables.css` if you'd like them to be more granular.
-
-These variables automatically injected into any CSS in the `/src/components` and `/src/app` directories, so they are always available for use in your app & component stylesheets.
-
-Each component that comes with Starbase uses at least one variable to demonstrate the functionality.
-
-All variables are cleaned up in your production code and only the values will remain, so there is no bloat or downside to using these variables. Go nuts!
 
 ### html webpack plugin
 
