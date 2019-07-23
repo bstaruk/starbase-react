@@ -2,20 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
-class HeaderLink extends React.PureComponent {
-  render() {
-    return (
-      <NavLink
-        exact
-        to={this.props.linkTo}
-        title={this.props.title}
-        activeClassName="header__link header__link--active"
-      >
-        {this.props.label}
-      </NavLink>
-    );
-  }
-}
+const HeaderLink = ({ label, linkTo, title }) => (
+  <NavLink
+    exact
+    to={linkTo}
+    title={title}
+    activeClassName="header__link header__link--active"
+  >
+    {label}
+  </NavLink>
+);
 
 HeaderLink.propTypes = {
   title: PropTypes.string.isRequired,
