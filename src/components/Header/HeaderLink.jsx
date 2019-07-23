@@ -1,27 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-class HeaderLink extends React.Component {
-  handleClick = () => this.props.handleClick(this.props.linkTo);
-
+class HeaderLink extends React.PureComponent {
   render() {
     return (
-      <Link
+      <NavLink
+        exact
         to={this.props.linkTo}
         title={this.props.title}
-        className={this.props.isActive ? 'header__link header__link--active' : 'header__link'}
-        onClick={this.handleClick}
+        activeClassName="header__link header__link--active"
       >
         {this.props.label}
-      </Link>
+      </NavLink>
     );
   }
 }
 
 HeaderLink.propTypes = {
-  isActive: PropTypes.bool.isRequired,
-  handleClick: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   linkTo: PropTypes.string.isRequired

@@ -4,20 +4,7 @@ import HeaderLink from './HeaderLink.jsx';
 
 import logo from './assets/starbase.png';
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeTab: window.location.pathname || '/'
-    };
-  }
-
-  setActiveTab = (activeTab) => {
-    this.setState({
-      activeTab
-    });
-  };
-
+class Header extends React.PureComponent {
   render() {
     return (
       <header role="banner" className="header">
@@ -31,8 +18,6 @@ class Header extends React.Component {
           <ul role="tablist" className="header__nav">
             <li>
               <HeaderLink
-                handleClick={this.setActiveTab}
-                isActive={this.state.activeTab === '/'}
                 linkTo="/"
                 title="a brief history of starbase-react-- it's got electrolytes!"
                 label="Why it's here"
@@ -41,8 +26,6 @@ class Header extends React.Component {
 
             <li>
               <HeaderLink
-                handleClick={this.setActiveTab}
-                isActive={this.state.activeTab === '/what'}
                 linkTo="/what"
                 title="an overview of the starbase-react commands"
                 label="What it does"
@@ -51,8 +34,6 @@ class Header extends React.Component {
 
             <li>
               <HeaderLink
-                handleClick={this.setActiveTab}
-                isActive={this.state.activeTab === '/who'}
                 linkTo="/who"
                 title="free software is for you and me"
                 label="Who it's for"
@@ -68,6 +49,5 @@ class Header extends React.Component {
 Header.propTypes = {
   title: PropTypes.string.isRequired
 };
-
 
 export default Header;
