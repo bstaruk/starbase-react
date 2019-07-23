@@ -1,12 +1,12 @@
 {
     "name": "starbase-react",
-    "version": "2.0.0",
-    "author": "Brian Staruk <brian@staruk.me>",
+    "version": "2.1.0",
+    "author": "Brian Staruk <brian@staruk.net>",
     "contributors": [
         {
             "name": "Brian Staruk",
-            "email": "brian@staruk.me",
-            "url": "https://brian.staruk.me"
+            "email": "brian@staruk.net",
+            "url": "https://brian.staruk.net"
         }
     ],
     "description": "an offline-first React 16 boilerplate w/ webpack 4, PostCSS, Babel 7 (ES6+) & more",
@@ -17,7 +17,7 @@
     },
     "bugs": {
         "url": "https://github.com/bstaruk/starbase-react/issues",
-        "email": "brian@staruk.me"
+        "email": "brian@staruk.net"
     },
     "engines": {
         "node": ">=8.9"
@@ -36,20 +36,20 @@
         "babel-eslint": "^10.0.1",
         "babel-loader": "^8.0.5",
         "babel-plugin-transform-class-properties": "^6.24.1",
-        "clean-webpack-plugin": "^1.0.1",
-        "css-loader": "^2.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^3.1.0",
         "css-mqpacker": "^7.0.0",
         "cssnano": "^4.1.8",
-        "eslint": "^5.13.0",
+        "eslint": "^6.1.0",
         "eslint-config-airbnb": "^17.1.0",
         "eslint-loader": "^2.1.2",
         "eslint-plugin-import": "^2.16.0",
         "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-react": "^7.12.4",
-        "file-loader": "^3.0.1",
+        "file-loader": "^4.1.0",
         "html-loader": "^0.5.5",
         "html-webpack-plugin": "^3.2.0",
-        "mini-css-extract-plugin": "^0.5.0",
+        "mini-css-extract-plugin": "^0.8.0",
         "offline-plugin": "^5.0.6",
         "postcss": "^7.0.14",
         "postcss-extend": "^1.0.5",
@@ -60,9 +60,9 @@
         "postcss-remove-root": "0.0.2",
         "postcss-reporter": "^6.0.1",
         "style-loader": "^0.23.1",
-        "stylelint": "^9.10.1",
+        "stylelint": "^10.1.0",
         "stylelint-config-standard": "^18.2.0",
-        "url-loader": "^1.1.2",
+        "url-loader": "^2.1.0",
         "webpack": "^4.29.3",
         "webpack-cli": "^3.2.3",
         "webpack-dev-server": "^3.1.14",
@@ -73,6 +73,6 @@
         "react": "^16.8.1",
         "react-dom": "^16.8.1",
         "react-hot-loader": "^4.6.5",
-        "react-router-dom": "^4.3.1"
+        "react-router-dom": "^5.0.1"
     }
 }
