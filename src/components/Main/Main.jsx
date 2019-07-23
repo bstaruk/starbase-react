@@ -21,7 +21,7 @@ const Main = () => (
     </Switch>
 
     <Footer>
-      <p>crafted in boston by <a href="https://brian.staruk.me" title="continue to brian.staruk.me" className="h-card">brian staruk</a> | <a href="https://github.com/bstaruk/starbase-react" title="learn more about starbase-react on github">starbase-react on github</a></p>
+      <p>crafted in boston by <a href="https://brian.staruk.net" title="continue to brian.staruk.net" className="h-card">brian staruk</a> | <a href="https://github.com/bstaruk/starbase-react" title="learn more about starbase-react on github">starbase-react on github</a></p>
     </Footer>
   </main>
 );
