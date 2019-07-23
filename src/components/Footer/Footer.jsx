@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Footer = ({
-  children
-}) => (
+const Footer = ({ children }) => (
   <footer role="contentinfo" className="footer">
     {children}
   </footer>

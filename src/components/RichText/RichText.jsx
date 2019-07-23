@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const RichText = ({
-  children
-}) => (
+const RichText = ({ children }) => (
   <div className="rich-text">
     {children}
   </div>
