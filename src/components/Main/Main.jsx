@@ -11,7 +11,7 @@ import Who from './views/Who.jsx';
 import Why from './views/Why.jsx';
 
 const Main = () => (
-  <main>
+  <>
     <Header title="starbase-react" />
 
     <Switch>
@@ -23,7 +23,7 @@ const Main = () => (
     <Footer>
       <p>crafted in boston by <a href="https://brian.staruk.net" title="continue to brian.staruk.net" className="h-card">brian staruk</a> | <a href="https://github.com/bstaruk/starbase-react" title="learn more about starbase-react on github">starbase-react on github</a></p>
     </Footer>
-  </main>
+  </>
 );
 
 export default Main;

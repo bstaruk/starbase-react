@@ -1,78 +1,79 @@
 {
-    "name": "starbase-react",
-    "version": "2.1.0",
-    "author": "Brian Staruk <brian@staruk.net>",
-    "contributors": [
-        {
-            "name": "Brian Staruk",
-            "email": "brian@staruk.net",
-            "url": "https://brian.staruk.net"
-        }
-    ],
-    "description": "an offline-first React 16 boilerplate w/ webpack 4, PostCSS, Babel 7 (ES6+) & more",
-    "homepage": "https://github.com/bstaruk/starbase-react",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/bstaruk/starbase-react.git"
-    },
-    "bugs": {
-        "url": "https://github.com/bstaruk/starbase-react/issues",
-        "email": "brian@staruk.net"
-    },
-    "engines": {
-        "node": ">=8.9"
-    },
-    "main": "index.js",
-    "scripts": {
-        "build": "webpack --config ./webpack/webpack.config.prod.js --mode production",
-        "dev": "webpack-dev-server --config ./webpack/webpack.config.dev.js --mode development"
-    },
-    "keywords": [],
-    "license": "MIT",
-    "devDependencies": {
-        "@babel/core": "^7.2.2",
-        "@babel/preset-env": "^7.3.1",
-        "@babel/preset-react": "^7.0.0",
-        "babel-eslint": "^10.0.1",
-        "babel-loader": "^8.0.5",
-        "babel-plugin-transform-class-properties": "^6.24.1",
-        "clean-webpack-plugin": "^3.0.0",
-        "css-loader": "^3.1.0",
-        "css-mqpacker": "^7.0.0",
-        "cssnano": "^4.1.8",
-        "eslint": "^6.1.0",
-        "eslint-config-airbnb": "^17.1.0",
-        "eslint-loader": "^2.1.2",
-        "eslint-plugin-import": "^2.16.0",
-        "eslint-plugin-jsx-a11y": "^6.2.1",
-        "eslint-plugin-react": "^7.12.4",
-        "file-loader": "^4.1.0",
-        "html-loader": "^0.5.5",
-        "html-webpack-plugin": "^3.2.0",
-        "mini-css-extract-plugin": "^0.8.0",
-        "offline-plugin": "^5.0.6",
-        "postcss": "^7.0.14",
-        "postcss-extend": "^1.0.5",
-        "postcss-import": "^12.0.1",
-        "postcss-loader": "^3.0.0",
-        "postcss-nested": "^4.1.1",
-        "postcss-preset-env": "^6.5.0",
-        "postcss-remove-root": "0.0.2",
-        "postcss-reporter": "^6.0.1",
-        "style-loader": "^0.23.1",
-        "stylelint": "^10.1.0",
-        "stylelint-config-standard": "^18.2.0",
-        "url-loader": "^2.1.0",
-        "webpack": "^4.29.3",
-        "webpack-cli": "^3.2.3",
-        "webpack-dev-server": "^3.1.14",
-        "webpack-merge": "^4.2.1"
-    },
-    "dependencies": {
-        "prop-types": "^15.6.2",
-        "react": "^16.8.1",
-        "react-dom": "^16.8.1",
-        "react-hot-loader": "^4.6.5",
-        "react-router-dom": "^5.0.1"
+  "name": "starbase-react",
+  "version": "2.2.0",
+  "author": "Brian Staruk <brian@staruk.net>",
+  "contributors": [
+    {
+      "name": "Brian Staruk",
+      "email": "brian@staruk.net",
+      "url": "https://brian.staruk.net"
     }
+  ],
+  "description": "an offline-first React 16 boilerplate w/ webpack 4, PostCSS, Babel 7 (ES6+) & more",
+  "homepage": "https://github.com/bstaruk/starbase-react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bstaruk/starbase-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bstaruk/starbase-react/issues",
+    "email": "brian@staruk.net"
+  },
+  "engines": {
+    "node": ">=8.9"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./webpack/webpack.config.prod.js --mode production",
+    "dev": "webpack-dev-server --config ./webpack/webpack.config.dev.js --mode development"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.8",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "2.1.2",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "offline-plugin": "^5.0.6",
+    "postcss": "^7.0.18",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.1.1",
+    "postcss-preset-env": "^6.5.0",
+    "postcss-remove-root": "0.0.2",
+    "postcss-reporter": "^6.0.1",
+    "style-loader": "^1.0.0",
+    "stylelint": "^11.1.1",
+    "stylelint-config-standard": "^19.0.0",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-hot-loader": "^4.12.15",
+    "react-router-dom": "^5.1.2"
+  }
 }
