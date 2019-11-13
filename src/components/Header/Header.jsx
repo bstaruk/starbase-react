@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeaderLink from './HeaderLink.jsx';
+import HeaderLink from './HeaderLink';
 
 import logo from './assets/starbase.png';
 
@@ -43,7 +43,7 @@ const Header = ({ title }) => (
 );
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default Header;

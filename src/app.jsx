@@ -5,20 +5,20 @@ import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
 
 // offline-plugin
-import './lib/offline-plugin';
+import '@lib/offline-plugin';
 
 // app component
-import Main from './components/Main/Main.jsx';
+import Main from '@components/Main/Main';
 
 // remove .no-js from html tag
 document.querySelector('html').classList.remove('no-js');
 
 // ordered css imports
-require('./lib/fonts/fonts.css');
-require('./components/Main/Main.css');
+require('@lib/fonts/fonts.css');
+require('@components/Main/Main.css');
 
 // import all other css
-require.context('./components/', true, /\.css$/);
+require.context('@components/', true, /\.css$/);
 
 // react app
 const render = () => {
@@ -28,14 +28,14 @@ const render = () => {
         <Main />
       </BrowserRouter>
     </AppContainer>,
-    document.getElementById('root')
+    document.getElementById('root'),
   );
 };
 
 render(Main);
 
 if (module.hot) {
-  module.hot.accept('./components/Main/Main.jsx', () => {
+  module.hot.accept('@components/Main/Main.jsx', () => {
     render(Main);
   });
 }

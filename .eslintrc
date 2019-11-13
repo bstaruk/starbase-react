@@ -1,9 +1,8 @@
 {
   "parser": "babel-eslint",
   "extends": "airbnb",
+  "plugins": ["import"],
   "rules": {
-    "comma-dangle": ["error", "never"],
-    "import/extensions": 0,
     "linebreak-style": 0,
     "max-len": 0,
     "no-new": 0,
@@ -18,5 +17,12 @@
     "location": true,
     "React": true,
     "PropTypes": true
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack/webpack.config.base.js"
+      }
+    }
   }
 }

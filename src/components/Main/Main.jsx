@@ -2,13 +2,13 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // global components
-import Footer from '../Footer/Footer.jsx';
-import Header from '../Header/Header.jsx';
+import Footer from '@components/Footer/Footer';
+import Header from '@components/Header/Header';
 
 // path views
-import What from './views/What.jsx';
-import Who from './views/Who.jsx';
-import Why from './views/Why.jsx';
+import What from './views/What';
+import Who from './views/Who';
+import Why from './views/Why';
 
 const Main = () => (
   <>
