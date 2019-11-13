@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import '@lib/offline-plugin';
 
 // app component
-import Main from '@components/Main/Main.jsx';
+import Main from '@components/Main/Main';
 
 // remove .no-js from html tag
 document.querySelector('html').classList.remove('no-js');
@@ -28,7 +28,7 @@ const render = () => {
         <Main />
       </BrowserRouter>
     </AppContainer>,
-    document.getElementById('root')
+    document.getElementById('root'),
   );
 };
 

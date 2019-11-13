@@ -16,7 +16,7 @@ const HeaderLink = ({ label, linkTo, title }) => (
 HeaderLink.propTypes = {
   title: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  linkTo: PropTypes.string.isRequired
+  linkTo: PropTypes.string.isRequired,
 };
 
 

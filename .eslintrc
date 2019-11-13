@@ -3,8 +3,6 @@
   "extends": "airbnb",
   "plugins": ["import"],
   "rules": {
-    "comma-dangle": ["error", "never"],
-    "import/extensions": 0,
     "linebreak-style": 0,
     "max-len": 0,
     "no-new": 0,

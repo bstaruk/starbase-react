@@ -21,12 +21,12 @@ module.exports = webpackMerge(webpackConfigBase, {
     historyApiFallback: true,
     port: 8080,
     stats: {
-      children: false
-    }
+      children: false,
+    },
   },
   devtool: 'inline-source-map',
   output: {
-    filename: '[name].js'
+    filename: '[name].js',
   },
   module: {
     rules: [{
@@ -35,7 +35,7 @@ module.exports = webpackMerge(webpackConfigBase, {
         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
-          options: { importLoaders: 1 }
+          options: { importLoaders: 1 },
         },
         {
           loader: 'postcss-loader',
@@ -46,35 +46,35 @@ module.exports = webpackMerge(webpackConfigBase, {
               stylelint(),
               postcssReporter(),
               postcssImport({
-                path: [path.resolve(__dirname, '../src')]
+                path: [path.resolve(__dirname, '../src')],
               }),
               postcssNested(),
               postcssPresetEnv({
                 stage: 1,
                 features: {
                   'custom-properties': {
-                    preserve: false
+                    preserve: false,
                   },
                   'custom-media': {
-                    preserve: false
-                  }
-                }
+                    preserve: false,
+                  },
+                },
               }),
               postcssExtend(),
               postcssRemoveRoot(),
               cssMqpacker({
-                sort: true
-              })
-            ]
-          }
-        }
-      ]
-    }]
+                sort: true,
+              }),
+            ],
+          },
+        },
+      ],
+    }],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css'
-    })
-  ]
+      chunkFilename: '[id].css',
+    }),
+  ],
 });

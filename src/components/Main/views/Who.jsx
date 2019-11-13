@@ -1,5 +1,5 @@
 import React from 'react';
-import RichText from '@components/RichText/RichText.jsx';
+import RichText from '@components/RichText/RichText';
 
 const Who = () => (
   <RichText>
