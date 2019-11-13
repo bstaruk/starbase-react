@@ -1,5 +1,5 @@
 import React from 'react';
-import RichText from '../../RichText/RichText.jsx';
+import RichText from '@components/RichText/RichText.jsx';
 
 const Why = () => (
   <RichText>

@@ -2,8 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // global components
-import Footer from '../Footer/Footer.jsx';
-import Header from '../Header/Header.jsx';
+import Footer from '@components/Footer/Footer.jsx';
+import Header from '@components/Header/Header.jsx';
 
 // path views
 import What from './views/What.jsx';

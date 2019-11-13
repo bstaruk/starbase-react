@@ -13,6 +13,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist')
   },
+  resolve: {
+    alias: {
+      '@components': path.resolve(__dirname, '../src/components'),
+      '@lib': path.resolve(__dirname, '../src/lib')
+    },
+    extensions: ['.js', '.jsx', '.json', '.css']
+  },
   module: {
     rules: [
       {
