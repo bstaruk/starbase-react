@@ -19,5 +19,4 @@ HeaderLink.propTypes = {
   linkTo: PropTypes.string.isRequired,
 };
 
-
 export default HeaderLink;
