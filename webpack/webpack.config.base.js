@@ -5,10 +5,7 @@ const path = require('path');
 module.exports = {
   context: path.resolve(__dirname, '../src'),
   entry: {
-    app: [
-      'react-hot-loader/patch',
-      './app.jsx',
-    ],
+    app: ['react-hot-loader/patch', './app.jsx'],
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -29,49 +26,59 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [{
-          loader: 'html-loader',
-          options: {
-            minimize: true,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              minimize: true,
+            },
           },
-        }],
+        ],
       },
       {
         test: /\.(png|jpg|gif)$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 8192,
-            name: 'images/[name].[md5:hash:hex:8].[ext]',
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: 'images/[name].[md5:hash:hex:8].[ext]',
+            },
           },
-        }],
+        ],
       },
       {
         test: /\.svg$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: 'images/[name].[md5:hash:hex:8].[ext]',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[name].[md5:hash:hex:8].[ext]',
+            },
           },
-        }],
+        ],
       },
       {
         test: /\.(mp4|ogg)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: 'assets/[name].[md5:hash:hex:8].[ext]',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/[name].[md5:hash:hex:8].[ext]',
+            },
           },
-        }],
+        ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[name].[md5:hash:hex:8].[ext]',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'fonts/[name].[md5:hash:hex:8].[ext]',
+            },
           },
-        }],
+        ],
       },
     ],
   },
