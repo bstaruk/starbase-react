@@ -3,8 +3,7 @@ import { hot } from 'react-hot-loader/root';
 import { ThemeProvider } from 'styled-components';
 import { Helmet } from 'react-helmet';
 
-import Main from '@components/Main';
-
+import Main from './Main';
 import GlobalStyle from './global-styles';
 import primaryTheme from './theme/primary';
 
