@@ -32,7 +32,7 @@ const render = () => {
 render(Main);
 
 if (module.hot) {
-  module.hot.accept('@components/Main/index.js', () => {
+  module.hot.accept('@components/Main', () => {
     render(Main);
   });
 }
