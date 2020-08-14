@@ -1,9 +1,9 @@
 import React from 'react';
-import RichText from '@components/RichText/RichText';
+
 import { A } from '@components/Link';
 
 const What = () => (
-  <RichText>
+  <>
     <p>
       starbase-react enables developers to spin up new React projects and begin
       coding within minutes instead of hours. It is ready, right out of the box,
@@ -30,7 +30,7 @@ const What = () => (
       minified &amp; optimized) assets that can be integrated into your CMS
       theme or used as a standalone static website.
     </p>
-  </RichText>
+  </>
 );
 
 export default What;

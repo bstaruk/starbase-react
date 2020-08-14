@@ -1,9 +1,9 @@
 import React from 'react';
-import RichText from '@components/RichText/RichText';
+
 import { A } from '@components/Link';
 
 const Why = () => (
-  <RichText>
+  <>
     <p>
       starbase-react is a spinoff of{' '}
       <A
@@ -23,7 +23,7 @@ const Why = () => (
       elegant but simple baseline development process that generates clean,
       production-ready assets while being bloat-free and easy to maintain.
     </p>
-  </RichText>
+  </>
 );
 
 export default Why;
