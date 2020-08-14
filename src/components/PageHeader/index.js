@@ -18,7 +18,7 @@ const BrandImg = styled.img`
   margin-right: 1rem;
 `;
 
-const Header = ({ title }) => (
+const PageHeader = ({ title }) => (
   <header role="banner">
     <BrandWrapper>
       <BrandImg src={logo} alt="starbase logo" />
@@ -61,8 +61,8 @@ const Header = ({ title }) => (
   </header>
 );
 
-Header.propTypes = {
+PageHeader.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default Header;
+export default PageHeader;

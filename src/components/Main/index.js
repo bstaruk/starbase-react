@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 // global components
 import PageFooter from '@components/PageFooter';
-import Header from '@components/Header';
+import PageHeader from '@components/PageHeader';
 import { A } from '@components/Link';
 
 // path views
@@ -13,7 +13,7 @@ import WhyPage from '@containers/WhyPage';
 
 const Main = () => (
   <>
-    <Header title="starbase-react" />
+    <PageHeader title="starbase-react" />
 
     <Switch>
       <Route exact path="/" component={WhyPage} />
