@@ -12,6 +12,7 @@ import '@lib/offline-plugin';
 import Main from '@components/Main/Main';
 
 import primaryTheme from './theme/primary';
+import GlobalStyle from './global-styles';
 
 // react app
 const render = () => {
@@ -20,6 +21,7 @@ const render = () => {
       <BrowserRouter>
         <ThemeProvider theme={primaryTheme}>
           <Main />
+          <GlobalStyle />
         </ThemeProvider>
       </BrowserRouter>
     </AppContainer>,
