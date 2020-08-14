@@ -4,22 +4,16 @@
 [![dependencies status](https://david-dm.org/bstaruk/starbase-react/status.svg)](https://david-dm.org/bstaruk/starbase-react)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react?ref=badge_shield)
 
-starbase-react is an offline-first React 16 boilerplate that is built with webpack 4, PostCSS & Babel 7. Get up and running in minutes using some of the most powerful front-end tools available in 2019:
+starbase-react is an offline-first React 16 boilerplate that is built with webpack 4, styled-components & Babel 7. Get up and running in minutes using some of the most powerful front-end tools available in 2019:
 
 * [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg)
 * [webpack 4](https://github.com/webpack/webpack) & [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
 * [React 16](https://facebook.github.io/react/) w/ [React Router](https://github.com/ReactTraining/react-router) & [React Hot Loader](https://github.com/gaearon/react-hot-loader)
 * [Babel 7](https://github.com/babel/babel) w/ [ESLint](https://github.com/eslint/eslint) & [Prettier](https://github.com/prettier/prettier)
-* [PostCSS](https://github.com/postcss/postcss) w/
-  * [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env)
-  * [PostCSS Nested](https://github.com/postcss/postcss-nested)
-  * [postcss-extend](https://github.com/travco/postcss-extend)
-  * [stylelint](https://github.com/stylelint/stylelint)
-  * [cssnano](https://github.com/ben-eb/cssnano)
-  * [MQPacker](https://github.com/hail2u/node-css-mqpacker)
+* [styled-components](https://github.com/styled-components/styled-components)
 * ...and more!
 
-starbase-react is a spin on [starbase](https://github.com/bstaruk/starbase), and intended to be relatively small in scope so that it may be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with React 16, webpack 4, PostCSS and/or ES6.
+starbase-react is a spin on [starbase](https://github.com/bstaruk/starbase), and intended to be relatively small in scope so that it may be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with React 16, webpack 4, styled-components and/or ES6.
 
 ## license
 
