@@ -2,7 +2,7 @@ import React from 'react';
 
 import { A } from '@components/Link';
 
-const What = () => (
+const WhatPage = () => (
   <>
     <p>
       starbase-react enables developers to spin up new React projects and begin
@@ -12,7 +12,7 @@ const What = () => (
     </p>
 
     <p>
-      The <code>dev</code> command uses{' '}
+      The <code>start</code> command uses{' '}
       <A
         href="https://github.com/webpack/webpack-dev-server"
         title="webpack-dev-server on github"
@@ -33,4 +33,4 @@ const What = () => (
   </>
 );
 
-export default What;
+export default WhatPage;

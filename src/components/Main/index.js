@@ -3,22 +3,22 @@ import { Switch, Route } from 'react-router-dom';
 
 // global components
 import PageFooter from '@components/PageFooter';
-import Header from '@components/Header';
+import PageHeader from '@components/PageHeader';
 import { A } from '@components/Link';
 
 // path views
-import What from './views/What';
-import Who from './views/Who';
-import Why from './views/Why';
+import WhatPage from '@containers/WhatPage';
+import WhoPage from '@containers/WhoPage';
+import WhyPage from '@containers/WhyPage';
 
 const Main = () => (
   <>
-    <Header title="starbase-react" />
+    <PageHeader title="starbase-react" />
 
     <Switch>
-      <Route exact path="/" component={Why} />
-      <Route path="/what" component={What} />
-      <Route path="/who" component={Who} />
+      <Route exact path="/" component={WhyPage} />
+      <Route path="/what" component={WhatPage} />
+      <Route path="/who" component={WhoPage} />
     </Switch>
 
     <PageFooter>
