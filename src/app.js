@@ -4,7 +4,7 @@ import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 
-import App from '@components/App';
+import App from '@containers/App';
 
 ReactDOM.render(
   <AppContainer>
