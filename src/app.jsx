@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
 // offline-plugin
 import '@lib/offline-plugin';
@@ -10,22 +11,16 @@ import '@lib/offline-plugin';
 // app component
 import Main from '@components/Main/Main';
 
-// remove .no-js from html tag
-document.querySelector('html').classList.remove('no-js');
-
-// ordered css imports
-require('@lib/fonts/fonts.css');
-require('@components/Main/Main.css');
-
-// import all other css
-require.context('@components/', true, /\.css$/);
+import primaryTheme from './theme/primary';
 
 // react app
 const render = () => {
   ReactDOM.render(
     <AppContainer>
       <BrowserRouter>
-        <Main />
+        <ThemeProvider theme={primaryTheme}>
+          <Main />
+        </ThemeProvider>
       </BrowserRouter>
     </AppContainer>,
     document.getElementById('root'),
