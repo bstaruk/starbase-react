@@ -1,9 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { A } from '@components/Link';
 
 const WhyPage = () => (
   <>
+    <Helmet>
+      <title>Why It&apos;s Here</title>
+    </Helmet>
+
     <p>
       starbase-react is a spinoff of{' '}
       <A

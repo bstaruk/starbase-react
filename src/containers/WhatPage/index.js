@@ -1,9 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { A } from '@components/Link';
 
 const WhatPage = () => (
   <>
+    <Helmet>
+      <title>What It Does</title>
+    </Helmet>
+
     <p>
       starbase-react enables developers to spin up new React projects and begin
       coding within minutes instead of hours. It is ready, right out of the box,

@@ -1,9 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { A } from '@components/Link';
 
 const WhoPage = () => (
   <>
+    <Helmet>
+      <title>Who It&apos;s For</title>
+    </Helmet>
+
     <p>
       starbase-react is open source and completely free for personal or
       commercial use. It is a personal project-- a living code styleguide and
