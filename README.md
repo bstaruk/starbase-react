@@ -38,7 +38,7 @@ After completing the steps below, you will be ready to begin using starbase-reac
 
 ### local development
 
-starbase-react uses [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to serve up your project at [http://localhost:8080](http://localhost:8080) for streamlined and convenient development.
+starbase-react uses [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to serve up your project at [http://localhost:3000](http://localhost:3000) for streamlined and convenient development.
 
 After running `npm run start` in the project root, your `/src` code will be served at the url above and watched for changes. As you modify code in `/src`, the project will be recompiled and your browser will refresh to show the latest changes.
 

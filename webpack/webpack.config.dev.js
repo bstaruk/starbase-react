@@ -19,7 +19,7 @@ module.exports = merge(webpackConfigBase, {
   devServer: {
     contentBase: path.resolve(__dirname, '../dist'),
     historyApiFallback: true,
-    port: 8080,
+    port: 3000,
     stats: {
       children: false,
     },
