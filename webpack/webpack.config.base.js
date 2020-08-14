@@ -13,6 +13,7 @@ module.exports = {
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, '../src/components'),
+      'react-dom': '@hot-loader/react-dom',
     },
     extensions: ['.js', '.jsx', '.json', '.css'],
   },
