@@ -8,14 +8,14 @@ const Wrapper = styled.footer`
   color: ${(props) => props.theme.color.gray};
 `;
 
-const Footer = ({ children }) => (
+const PageFooter = ({ children }) => (
   <Wrapper role="contentinfo" className="footer">
     {children}
   </Wrapper>
 );
 
-Footer.propTypes = {
+PageFooter.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Footer;
+export default PageFooter;

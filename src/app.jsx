@@ -9,7 +9,7 @@ import { ThemeProvider } from 'styled-components';
 import '@lib/offline-plugin';
 
 // app component
-import Main from '@components/Main/Main';
+import Main from '@components/Main';
 
 import primaryTheme from './theme/primary';
 import GlobalStyle from './global-styles';
@@ -32,7 +32,7 @@ const render = () => {
 render(Main);
 
 if (module.hot) {
-  module.hot.accept('@components/Main/Main.jsx', () => {
+  module.hot.accept('@components/Main/index.js', () => {
     render(Main);
   });
 }

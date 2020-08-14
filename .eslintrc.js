@@ -15,6 +15,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'react/destructuring-assignment': 0,
     'react/jsx-one-expression-per-line': 0,
+    'react/jsx-filename-extension': 0,
   },
   globals: {
     document: true,

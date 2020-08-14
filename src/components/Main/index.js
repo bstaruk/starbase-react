@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // global components
-import Footer from '@components/Footer/Footer';
+import PageFooter from '@components/PageFooter';
 import Header from '@components/Header/Header';
 import { A } from '@components/Link';
 
@@ -21,7 +21,7 @@ const Main = () => (
       <Route path="/who" component={Who} />
     </Switch>
 
-    <Footer>
+    <PageFooter>
       <p>
         crafted in boston by{' '}
         <A
@@ -39,7 +39,7 @@ const Main = () => (
           starbase-react on github
         </A>
       </p>
-    </Footer>
+    </PageFooter>
   </>
 );
 
