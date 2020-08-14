@@ -40,11 +40,11 @@ After completing the steps below, you will be ready to begin using starbase-reac
 
 starbase-react uses [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to serve up your project at [http://localhost:8080](http://localhost:8080) for streamlined and convenient development.
 
-After running `npm run dev` in the project root, your `/src` code will be served at the url above and watched for changes. As you modify code in `/src`, the project will be recompiled and your browser will refresh to show the latest changes.
+After running `npm run start` in the project root, your `/src` code will be served at the url above and watched for changes. As you modify code in `/src`, the project will be recompiled and your browser will refresh to show the latest changes.
 
 ```
 cd /path/to/starbase-react
-npm run dev
+npm run start
 ```
 
 ### building for production
@@ -119,7 +119,7 @@ Out of the box, starbase-react caches everything, because the project is less th
 
 [Service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers), by design, only function on secure (https) environments. There is no issue with running starbase-react on an http environment-- the service worker will simply not be utilized.
 
-You may see an info log entry in your console from `offline-plugin` while using the `dev` command, feel free to ignore this. `offline-plugin` is not utilized on the dev server because [it doesn't always play nice with `webpack-dev-server`](https://github.com/NekR/offline-plugin/issues/138). It is intentionally only utilized in production builds.
+You may see an info log entry in your console from `offline-plugin` while using the `start` command, feel free to ignore this. `offline-plugin` is not utilized on the dev server because [it doesn't always play nice with `webpack-dev-server`](https://github.com/NekR/offline-plugin/issues/138). It is intentionally only utilized in production builds.
 
 #### to remove offline-plugin:
 
