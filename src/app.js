@@ -4,9 +4,7 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-
-// offline-plugin
-import '@lib/offline-plugin';
+import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 
 // app component
 import Main from '@components/Main';
@@ -35,4 +33,8 @@ if (module.hot) {
   module.hot.accept('@components/Main', () => {
     render(Main);
   });
+}
+
+if (process.env.NODE_ENV === 'production') {
+  OfflinePluginRuntime.install();
 }

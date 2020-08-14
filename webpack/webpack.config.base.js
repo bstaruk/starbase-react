@@ -13,7 +13,6 @@ module.exports = {
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, '../src/components'),
-      '@lib': path.resolve(__dirname, '../src/lib'),
     },
     extensions: ['.js', '.jsx', '.json', '.css'],
   },
@@ -67,6 +66,9 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development',
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/templates/index.html'),
       filename: 'index.html',
