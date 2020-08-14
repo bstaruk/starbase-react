@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 // global components
 import PageFooter from '@components/PageFooter';
-import Header from '@components/Header/Header';
+import Header from '@components/Header';
 import { A } from '@components/Link';
 
 // path views
