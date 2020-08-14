@@ -2,7 +2,7 @@ import React from 'react';
 
 import { A } from '@components/Link';
 
-const What = () => (
+const WhatPage = () => (
   <>
     <p>
       starbase-react enables developers to spin up new React projects and begin
@@ -33,4 +33,4 @@ const What = () => (
   </>
 );
 
-export default What;
+export default WhatPage;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { A } from '@components/Link';
 
-const Why = () => (
+const WhyPage = () => (
   <>
     <p>
       starbase-react is a spinoff of{' '}
@@ -26,4 +26,4 @@ const Why = () => (
   </>
 );
 
-export default Why;
+export default WhyPage;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { A } from '@components/Link';
 
-const Who = () => (
+const WhoPage = () => (
   <>
     <p>
       starbase-react is open source and completely free for personal or
@@ -24,4 +24,4 @@ const Who = () => (
   </>
 );
 
-export default Who;
+export default WhoPage;
