@@ -12,7 +12,7 @@ const WhatPage = () => (
     </p>
 
     <p>
-      The <code>dev</code> command uses{' '}
+      The <code>start</code> command uses{' '}
       <A
         href="https://github.com/webpack/webpack-dev-server"
         title="webpack-dev-server on github"
