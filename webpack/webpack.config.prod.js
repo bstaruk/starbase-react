@@ -23,49 +23,51 @@ module.exports = merge(webpackConfigBase, {
     filename: '[name].[hash:8].js',
   },
   module: {
-    rules: [{
-      test: /\.css$/,
-      use: [
-        MiniCssExtractPlugin.loader,
-        {
-          loader: 'css-loader',
-          options: { importLoaders: 1 },
-        },
-        {
-          loader: 'postcss-loader',
-          options: {
-            ident: 'postcss',
-            plugins: () => [
-              stylelint(),
-              postcssReporter(),
-              postcssImport({
-                path: [path.resolve(__dirname, '../src')],
-              }),
-              postcssNested(),
-              postcssPresetEnv({
-                stage: 1,
-                features: {
-                  'custom-properties': {
-                    preserve: false,
-                  },
-                  'custom-media': {
-                    preserve: false,
-                  },
-                },
-              }),
-              postcssExtend(),
-              postcssRemoveRoot(),
-              cssMqpacker({
-                sort: true,
-              }),
-              cssnano({
-                preset: 'default',
-              }),
-            ],
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 },
           },
-        },
-      ],
-    }],
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                stylelint(),
+                postcssReporter(),
+                postcssImport({
+                  path: [path.resolve(__dirname, '../src')],
+                }),
+                postcssNested(),
+                postcssPresetEnv({
+                  stage: 1,
+                  features: {
+                    'custom-properties': {
+                      preserve: false,
+                    },
+                    'custom-media': {
+                      preserve: false,
+                    },
+                  },
+                }),
+                postcssExtend(),
+                postcssRemoveRoot(),
+                cssMqpacker({
+                  sort: true,
+                }),
+                cssnano({
+                  preset: 'default',
+                }),
+              ],
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({

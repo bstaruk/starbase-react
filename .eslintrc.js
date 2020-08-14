@@ -1,13 +1,18 @@
+const fs = require('fs');
+const path = require('path');
+
+const prettierOptions = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'),
+);
+
 module.exports = {
   parser: 'babel-eslint',
-  extends: 'airbnb',
-  plugins: ['import'],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
+  plugins: ['prettier', 'import'],
   rules: {
-    'linebreak-style': 0,
-    'max-len': 0,
-    'no-new': 0,
-    'no-plusplus': 0,
+    'prettier/prettier': ['error', prettierOptions],
     'no-use-before-define': 0,
+    'import/no-extraneous-dependencies': 0,
     'react/destructuring-assignment': 0,
     'react/jsx-one-expression-per-line': 0,
   },
