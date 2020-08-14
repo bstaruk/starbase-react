@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const path = require('path');
 const { merge } = require('webpack-merge');
 
@@ -6,9 +5,6 @@ const { merge } = require('webpack-merge');
 const webpackConfigBase = require('./webpack.config.base.js');
 
 module.exports = merge(webpackConfigBase, {
-  entry: {
-    app: ['react-hot-loader/patch', './app.js'],
-  },
   devServer: {
     contentBase: path.resolve(__dirname, '../dist'),
     historyApiFallback: true,
@@ -21,5 +17,4 @@ module.exports = merge(webpackConfigBase, {
   output: {
     filename: '[name].js',
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
 });
