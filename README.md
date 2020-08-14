@@ -9,7 +9,7 @@ starbase-react is an offline-first React 16 boilerplate that is built with webpa
 * [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg)
 * [webpack 4](https://github.com/webpack/webpack) & [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
 * [React 16](https://facebook.github.io/react/) w/ [React Router](https://github.com/ReactTraining/react-router) & [React Hot Loader](https://github.com/gaearon/react-hot-loader)
-* [Babel 7](https://github.com/babel/babel) w/ [ESLint](https://github.com/eslint/eslint)
+* [Babel 7](https://github.com/babel/babel) w/ [ESLint](https://github.com/eslint/eslint) & [Prettier](https://github.com/prettier/prettier)
 * [PostCSS](https://github.com/postcss/postcss) w/
   * [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env)
   * [PostCSS Nested](https://github.com/postcss/postcss-nested)
@@ -106,6 +106,10 @@ starbase-react enforces the [Airbnb JavaScript Style Guide](https://github.com/a
 3. run `npm updated` (or `yarn`)
 
 After completing the steps above, the only rules that eslint will enforce are the ones you define in the `rules` object in `/.eslintrc.js`.
+
+### prettier js formatting
+
+starbase uses [Prettier](https://github.com/prettier/prettier) to enforce and simplify code consistency. If you use VS Code, check out the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
 
 ### service worker caching
 
