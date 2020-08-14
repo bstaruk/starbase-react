@@ -15,6 +15,4 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
-if (process.env.NODE_ENV === 'production') {
-  OfflinePluginRuntime.install();
-}
+OfflinePluginRuntime.install();
