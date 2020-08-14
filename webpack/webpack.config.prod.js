@@ -9,15 +9,6 @@ module.exports = merge(webpackConfigBase, {
   output: {
     filename: '[name].[hash:8].js',
   },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
-  },
   plugins: [
     new CleanWebpackPlugin(),
     new OfflinePlugin({
