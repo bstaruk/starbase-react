@@ -1,8 +1,9 @@
 import React from 'react';
-import RichText from '@components/RichText/RichText';
+
+import { A } from '@components/Link';
 
 const What = () => (
-  <RichText>
+  <>
     <p>
       starbase-react enables developers to spin up new React projects and begin
       coding within minutes instead of hours. It is ready, right out of the box,
@@ -12,12 +13,12 @@ const What = () => (
 
     <p>
       The <code>dev</code> command uses{' '}
-      <a
+      <A
         href="https://github.com/webpack/webpack-dev-server"
         title="webpack-dev-server on github"
       >
         webpack-dev-server
-      </a>{' '}
+      </A>{' '}
       to serve up your project on a development server (localhost) which will
       recompile and lint as you modify the source. You can even access this web
       server via LAN, with a static IP, for testing your app on multiple
@@ -29,7 +30,7 @@ const What = () => (
       minified &amp; optimized) assets that can be integrated into your CMS
       theme or used as a standalone static website.
     </p>
-  </RichText>
+  </>
 );
 
 export default What;

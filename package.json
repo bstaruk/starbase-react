@@ -9,7 +9,7 @@
       "url": "https://brian.staruk.net"
     }
   ],
-  "description": "an offline-first React 16 boilerplate w/ webpack 4, PostCSS, Babel 7 (ES6+) & more",
+  "description": "an offline-first React 16 boilerplate w/ styled-components, webpack 4, Babel 7 (ES6+) & more",
   "homepage": "https://github.com/bstaruk/starbase-react",
   "repository": {
     "type": "git",
@@ -53,21 +53,14 @@
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
-    "mini-css-extract-plugin": "^0.10.0",
     "offline-plugin": "^5.0.7",
     "path": "^0.12.7",
-    "postcss": "^7.0.32",
-    "postcss-extend": "^1.0.5",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-nested": "^4.2.3",
-    "postcss-preset-env": "^6.7.0",
-    "postcss-remove-root": "0.0.2",
-    "postcss-reporter": "^6.0.1",
     "prettier": "^2.0.5",
     "style-loader": "^1.2.1",
     "stylelint": "^13.6.1",
-    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
@@ -79,6 +72,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.21",
-    "react-router-dom": "^5.2.0"
+    "react-is": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.1.1"
   }
 }

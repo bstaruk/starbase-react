@@ -1,15 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeaderLink from './HeaderLink';
+import styled from 'styled-components';
 
+import { H1 } from '@components/Heading';
+
+import HeaderLink from './HeaderLink';
 import logo from './assets/starbase.png';
 
+const BrandWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+const BrandImg = styled.img`
+  height: 3rem;
+  margin-right: 1rem;
+`;
+
 const Header = ({ title }) => (
-  <header role="banner" className="header">
-    <div className="header__brand">
-      <img src={logo} alt="starbase logo" className="header__image" />
-      <h1 className="header__title">{title}</h1>
-    </div>
+  <header role="banner">
+    <BrandWrapper>
+      <BrandImg src={logo} alt="starbase logo" />
+      <H1>{title}</H1>
+    </BrandWrapper>
+
     <p>
       starbase-react is an open source webpack 4, React 16 &amp; PostCSS
       boilerplate for web developers, with a small footprint and plenty of room
@@ -17,7 +32,7 @@ const Header = ({ title }) => (
     </p>
 
     <nav>
-      <ul role="tablist" className="header__nav">
+      <ul role="tablist">
         <li>
           <HeaderLink
             linkTo="/"

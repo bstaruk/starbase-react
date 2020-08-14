@@ -1,14 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from '@components/Link';
 
 const HeaderLink = ({ label, linkTo, title }) => (
-  <NavLink
-    exact
-    to={linkTo}
-    title={title}
-    activeClassName="header__link header__link--active"
-  >
+  <NavLink exact to={linkTo} title={title} activeClassName="active">
     {label}
   </NavLink>
 );

@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   context: path.resolve(__dirname, '../src'),
   entry: {
-    app: ['react-hot-loader/patch', './app.jsx'],
+    app: ['react-hot-loader/patch', './app.js'],
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -23,6 +23,11 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.html$/,
@@ -54,28 +59,6 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: 'images/[name].[md5:hash:hex:8].[ext]',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(mp4|ogg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'assets/[name].[md5:hash:hex:8].[ext]',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'fonts/[name].[md5:hash:hex:8].[ext]',
             },
           },
         ],

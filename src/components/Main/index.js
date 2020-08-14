@@ -2,8 +2,9 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // global components
-import Footer from '@components/Footer/Footer';
-import Header from '@components/Header/Header';
+import PageFooter from '@components/PageFooter';
+import Header from '@components/Header';
+import { A } from '@components/Link';
 
 // path views
 import What from './views/What';
@@ -20,25 +21,25 @@ const Main = () => (
       <Route path="/who" component={Who} />
     </Switch>
 
-    <Footer>
+    <PageFooter>
       <p>
         crafted in boston by{' '}
-        <a
+        <A
           href="https://brian.staruk.net"
           title="continue to brian.staruk.net"
           className="h-card"
         >
           brian staruk
-        </a>{' '}
+        </A>{' '}
         |{' '}
-        <a
+        <A
           href="https://github.com/bstaruk/starbase-react"
           title="learn more about starbase-react on github"
         >
           starbase-react on github
-        </a>
+        </A>
       </p>
-    </Footer>
+    </PageFooter>
   </>
 );
 
