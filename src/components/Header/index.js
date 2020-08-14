@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeaderLink from './HeaderLink';
 
+import { H1 } from '@components/Heading';
+
+import HeaderLink from './HeaderLink';
 import logo from './assets/starbase.png';
 
 const Header = ({ title }) => (
   <header role="banner" className="header">
     <div className="header__brand">
       <img src={logo} alt="starbase logo" className="header__image" />
-      <h1 className="header__title">{title}</h1>
+      <H1 className="header__title">{title}</H1>
     </div>
     <p>
       starbase-react is an open source webpack 4, React 16 &amp; PostCSS

@@ -9,9 +9,7 @@ const Wrapper = styled.footer`
 `;
 
 const PageFooter = ({ children }) => (
-  <Wrapper role="contentinfo" className="footer">
-    {children}
-  </Wrapper>
+  <Wrapper role="contentinfo">{children}</Wrapper>
 );
 
 PageFooter.propTypes = {
