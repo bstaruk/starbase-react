@@ -12,12 +12,16 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', prettierOptions],
     'import/no-extraneous-dependencies': 0,
+    'import/prefer-default-export': 0,
     'react/jsx-filename-extension': 0,
   },
+  env: {
+    jest: true,
+    browser: true,
+    node: true,
+    es6: true,
+  },
   globals: {
-    document: true,
-    window: true,
-    location: true,
     React: true,
     PropTypes: true,
   },
