@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import ThemeProvider from '@containers/App/ThemeProvider';
+import ThemeProvider from '@containers/App/Theme';
 
 import PageFooter from '../index';
 

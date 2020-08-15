@@ -3,8 +3,7 @@ import { hot } from 'react-hot-loader/root';
 import { Helmet } from 'react-helmet';
 
 import Main from './Main';
-import ThemeProvider from './ThemeProvider';
-import GlobalStyle from './global-styles';
+import ThemeProvider, { GlobalStyle } from './Theme';
 
 const App = () => (
   <>
