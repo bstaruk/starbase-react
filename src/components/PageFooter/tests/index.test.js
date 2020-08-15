@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 
-import primaryTheme from '../../../containers/App/theme/primary';
+import primaryTheme from '@containers/App/theme/primary';
 
 import PageFooter from '../index';
 
