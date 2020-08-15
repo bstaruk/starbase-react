@@ -5,27 +5,24 @@ import ThemeProvider from '@containers/App/Theme';
 
 import PageHeader from '../index';
 
+const renderComponent = ({ title }) =>
+  render(
+    <BrowserRouter>
+      <ThemeProvider>
+        <PageHeader title={title} />
+      </ThemeProvider>
+    </BrowserRouter>,
+  );
+
 describe('<PageHeader />', () => {
-  it.skip('Expect to not log errors in console', () => {
+  it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(
-      <BrowserRouter>
-        <ThemeProvider>
-          <PageHeader title="Satoshi" />
-        </ThemeProvider>
-      </BrowserRouter>,
-    );
+    renderComponent({ title: 'Hello World' });
     expect(spy).not.toHaveBeenCalled();
   });
 
-  it('renders personalized greeting', async () => {
-    const { getByText } = render(
-      <BrowserRouter>
-        <ThemeProvider>
-          <PageHeader title="Satoshi" />
-        </ThemeProvider>
-      </BrowserRouter>,
-    );
-    await waitForElement(() => getByText(/Satoshi/i));
+  it('Renders personalized greeting', async () => {
+    const { getByText } = renderComponent({ title: 'starbase' });
+    await waitForElement(() => getByText(/starbase/i));
   });
 });
