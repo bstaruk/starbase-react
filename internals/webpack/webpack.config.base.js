@@ -3,17 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  context: path.resolve(__dirname, '../src'),
+  context: path.resolve(__dirname, '../../src'),
   entry: {
     app: ['./app.js'],
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../../dist'),
   },
   resolve: {
     alias: {
-      '@components': path.resolve(__dirname, '../src/components'),
-      '@containers': path.resolve(__dirname, '../src/containers'),
+      '@components': path.resolve(__dirname, '../../src/components'),
+      '@containers': path.resolve(__dirname, '../../src/containers'),
     },
     extensions: ['.js', '.jsx', '.json', '.css'],
   },
@@ -70,9 +70,12 @@ module.exports = {
       NODE_ENV: 'development',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../src/templates/index.html'),
+      template: path.resolve(__dirname, '../../src/templates/index.html'),
       filename: 'index.html',
-      favicon: path.resolve(__dirname, '../src/templates/images/favicon.png'),
+      favicon: path.resolve(
+        __dirname,
+        '../../src/templates/images/favicon.png',
+      ),
     }),
   ],
 };
