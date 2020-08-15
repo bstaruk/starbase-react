@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   context: path.resolve(__dirname, '../src'),
   entry: {
-    app: ['react-hot-loader/patch', './app.js'],
+    app: ['./app.js'],
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -14,7 +14,6 @@ module.exports = {
     alias: {
       '@components': path.resolve(__dirname, '../src/components'),
       '@containers': path.resolve(__dirname, '../src/containers'),
-      'react-dom': '@hot-loader/react-dom',
     },
     extensions: ['.js', '.jsx', '.json', '.css'],
   },
@@ -67,7 +66,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development',
     }),

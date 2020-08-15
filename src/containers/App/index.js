@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader/root';
 import { Helmet } from 'react-helmet';
 
 import Main from './Main';
@@ -24,4 +23,4 @@ const App = () => (
   </>
 );
 
-export default hot(App);
+export default App;
