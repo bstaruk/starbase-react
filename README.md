@@ -8,9 +8,8 @@ starbase-react is an offline-first React 16 boilerplate that is built with webpa
 
 * [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg)
 * [webpack 4](https://github.com/webpack/webpack) & [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-* [React 16](https://facebook.github.io/react/) w/ [React Router](https://github.com/ReactTraining/react-router) & [React Hot Loader](https://github.com/gaearon/react-hot-loader)
+* [React 16](https://facebook.github.io/react/) w/ [styled-components](https://github.com/styled-components/styled-components)
 * [Babel 7](https://github.com/babel/babel) w/ [ESLint](https://github.com/eslint/eslint) & [Prettier](https://github.com/prettier/prettier)
-* [styled-components](https://github.com/styled-components/styled-components)
 * ...and more!
 
 starbase-react is a spin on [starbase](https://github.com/bstaruk/starbase), and intended to be relatively small in scope so that it may be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with React 16, webpack 4, styled-components and/or ES6.
