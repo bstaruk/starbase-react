@@ -63,8 +63,8 @@ Removing hashing for production builds is not recommended.
 
 starbase-react is setup to clear all contents of `/dist` (where compiled assets are piped into) during each `npm run build`. If you'd like to remove this part of the build process, perform the following steps:
 
-1. remove `CleanWebpackPlugin` from the plugins array in `/webpack/webpack.config.prod.js`
-2. remove `CleanWebpackPlugin` as a requirement at the top of `/webpack/webpack.config.prod.js`
+1. remove `CleanWebpackPlugin` from the plugins array in `/internals/webpack/webpack.config.prod.js`
+2. remove `CleanWebpackPlugin` as a requirement at the top of `/internals/webpack/webpack.config.prod.js`
 3. remove the `CleanWebpackPlugin` dependency from `/package.json`
 
 Removing the cleanup process means that deleted assets in `/src` will not be deleted in `/dist` until you manually do so. I recommend keeping the cleanup process intact unless you have a specific reason not to, such as having un-managed assets in `/dist`.
