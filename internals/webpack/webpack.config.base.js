@@ -70,12 +70,9 @@ module.exports = {
       NODE_ENV: 'development',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../../src/templates/index.html'),
+      template: path.resolve(__dirname, '../../src/index.html'),
       filename: 'index.html',
-      favicon: path.resolve(
-        __dirname,
-        '../../src/templates/images/favicon.png',
-      ),
+      favicon: path.resolve(__dirname, '../../src/images/favicon.png'),
     }),
   ],
 };
