@@ -5,6 +5,7 @@ const { merge } = require('webpack-merge');
 const webpackConfigBase = require('./webpack.config.base.js');
 
 module.exports = merge(webpackConfigBase, {
+  mode: 'development',
   devServer: {
     contentBase: path.resolve(__dirname, '../../dist'),
     historyApiFallback: true,

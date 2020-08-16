@@ -6,6 +6,7 @@ const { merge } = require('webpack-merge');
 const webpackConfigBase = require('./webpack.config.base.js');
 
 module.exports = merge(webpackConfigBase, {
+  mode: 'production',
   output: {
     filename: '[name].[hash:8].js',
   },
