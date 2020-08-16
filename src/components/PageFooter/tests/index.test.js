@@ -4,14 +4,17 @@ import ThemeProvider from '@containers/App/Theme';
 
 import PageFooter from '../index';
 
+const renderComponent = () =>
+  render(
+    <ThemeProvider>
+      <PageFooter>Example Footer</PageFooter>
+    </ThemeProvider>,
+  );
+
 describe('<PageFooter />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(
-      <ThemeProvider>
-        <PageFooter>Example Footer</PageFooter>
-      </ThemeProvider>,
-    );
+    renderComponent();
     expect(spy).not.toHaveBeenCalled();
   });
 });
