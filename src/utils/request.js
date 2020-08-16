@@ -41,11 +41,7 @@ function checkStatus(response) {
  * @return {object}           The response data
  */
 export default function request(url, options, raw = false) {
-  const fullUrl =
-    url.indexOf('http') === -1
-      ? `https://${process.env.REACT_APP_API_HOST}${url}`
-      : url;
-  const res = fetch(fullUrl, options);
+  const res = fetch(url, options);
 
   // return raw response if requested via param
   if (raw) {
