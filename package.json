@@ -24,9 +24,9 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./internals/webpack/webpack.config.prod.js --mode production",
-    "start": "webpack-dev-server --config ./internals/webpack/webpack.config.dev.js --mode development",
-    "test": "jest"
+    "build": "cross-env NODE_ENV=production webpack --config ./internals/webpack/webpack.config.prod.js --mode production",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./internals/webpack/webpack.config.dev.js --mode development",
+    "test": "cross-env NODE_ENV=test jest"
   },
   "keywords": [],
   "license": "MIT",
@@ -41,6 +41,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^4.2.1",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
