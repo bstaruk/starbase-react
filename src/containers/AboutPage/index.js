@@ -3,11 +3,18 @@ import { Helmet } from 'react-helmet';
 
 import { A } from '@components/Link';
 
-const WhatPage = () => (
+const AboutPage = () => (
   <>
     <Helmet>
-      <title>What It Does</title>
+      <title>About</title>
     </Helmet>
+
+    <p>
+      starbase-react is open source and completely free for personal or
+      commercial use. It is a personal project-- a living code styleguide and
+      outlet for technical exploration that you can make your own if you dig it.
+      Pick it up, check it out and make it do a barrel roll.
+    </p>
 
     <p>
       starbase-react enables developers to spin up new React projects and begin
@@ -38,4 +45,4 @@ const WhatPage = () => (
   </>
 );
 
-export default WhatPage;
+export default AboutPage;

@@ -44,17 +44,9 @@ const PageHeader = ({ title }) => (
 
         <li>
           <HeaderLink
-            linkTo="/what"
-            title="an overview of the starbase-react commands"
+            linkTo="/about"
+            title="an overview of starbase-react"
             label="What it does"
-          />
-        </li>
-
-        <li>
-          <HeaderLink
-            linkTo="/who"
-            title="free software is for you and me"
-            label="Who it's for"
           />
         </li>
       </ul>
