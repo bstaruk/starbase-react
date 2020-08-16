@@ -1,7 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Switch, Route } from 'react-router-dom';
 
-import Main from './Main';
+import PageFooter from '@components/PageFooter';
+import PageHeader from '@components/PageHeader';
+
+import HomePage from '@containers/HomePage';
+import AboutPage from '@containers/AboutPage';
+
 import ThemeProvider, { GlobalStyle } from './Theme';
 
 const App = () => (
@@ -17,7 +23,16 @@ const App = () => (
     </Helmet>
 
     <ThemeProvider>
-      <Main />
+      <>
+        <PageHeader title="starbase-react" />
+
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+        </Switch>
+
+        <PageFooter />
+      </>
       <GlobalStyle />
     </ThemeProvider>
   </>

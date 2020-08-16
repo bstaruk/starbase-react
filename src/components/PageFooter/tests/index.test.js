@@ -7,7 +7,7 @@ import PageFooter from '../index';
 const renderComponent = () =>
   render(
     <ThemeProvider>
-      <PageFooter>Example Footer</PageFooter>
+      <PageFooter />
     </ThemeProvider>,
   );
 
