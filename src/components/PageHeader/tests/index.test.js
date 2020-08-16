@@ -22,7 +22,7 @@ describe('<PageHeader />', () => {
   });
 
   it('Renders personalized greeting', async () => {
-    const { getByText } = renderComponent({ title: 'starbase' });
-    await waitForElement(() => getByText(/starbase/i));
+    const { getByText } = renderComponent({ title: 'Satoshi' });
+    await waitForElement(() => getByText(/Satoshi/i));
   });
 });
