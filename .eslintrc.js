@@ -14,6 +14,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,
     'react/jsx-filename-extension': 0,
+    'react/forbid-prop-types': 0,
   },
   env: {
     jest: true,
