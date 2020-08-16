@@ -7,10 +7,9 @@ import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 
 import App from '@containers/App';
 
-import configureStore from './configureStore';
+import configureStore from './store';
 
-const initialState = {};
-const store = configureStore(initialState);
+const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>

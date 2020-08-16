@@ -1,11 +1,24 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
+// import reducers (ctrl+f "SETUP REDUCERS")
+import homePageReducer from '@containers/HomePage/reducer';
+
+// import sagas (ctrl+f "SETUP SAGAS")
 import getHomePageSaga from '@containers/HomePage/saga';
 
-import createReducer from './reducers';
+function createReducer(injectedReducers = {}) {
+  // SETUP REDUCERS HERE
+  const rootReducer = combineReducers({
+    homePage: homePageReducer,
+    ...injectedReducers,
+  });
 
-export default function configureStore(initialState = {}) {
+  return rootReducer;
+}
+
+// main redux config function that's passed back to app.js
+export default function configureStore() {
   let composeEnhancers = compose;
   const reduxSagaMonitorOptions = {};
 
@@ -25,14 +38,14 @@ export default function configureStore(initialState = {}) {
   // it's alive!
   const store = createStore(
     createReducer(),
-    initialState,
+    {},
     composeEnhancers(...enhancers),
   );
 
   // applying extensions
   store.runSaga = sagaMiddleware.run;
 
-  // running sagas
+  // SETUP SAGAS HERE
   store.runSaga(getHomePageSaga);
 
   return store;
