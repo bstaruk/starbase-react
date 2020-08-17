@@ -12,7 +12,7 @@ const renderComponent = () =>
   );
 
 describe('<PageFooter />', () => {
-  it('Expect to not log errors in console', () => {
+  it('does not have console errors', () => {
     const spy = jest.spyOn(global.console, 'error');
     renderComponent();
     expect(spy).not.toHaveBeenCalled();

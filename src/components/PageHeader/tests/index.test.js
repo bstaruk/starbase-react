@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitForElement } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import ThemeProvider from '@containers/App/Theme';
 
@@ -15,14 +15,15 @@ const renderComponent = ({ title }) =>
   );
 
 describe('<PageHeader />', () => {
-  it('Expect to not log errors in console', () => {
+  it('does not have console errors', () => {
     const spy = jest.spyOn(global.console, 'error');
     renderComponent({ title: 'Hello World' });
     expect(spy).not.toHaveBeenCalled();
   });
 
-  it('Renders personalized greeting', async () => {
-    const { getByText } = renderComponent({ title: 'Satoshi' });
-    await waitForElement(() => getByText(/Satoshi/i));
+  it('loads and displays greeting', async () => {
+    const title = 'Test Message';
+    renderComponent({ title });
+    expect(screen.getByRole('banner')).toHaveTextContent(title);
   });
 });
