@@ -20,4 +20,10 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
-OfflinePluginRuntime.install();
+if (process.env.NODE_ENV === 'production') {
+  OfflinePluginRuntime.install({
+    onUpdateReady: () => {
+      OfflinePluginRuntime.applyUpdate();
+    },
+  });
+}
