@@ -17,7 +17,14 @@ export function* getRepoDetailsSaga({ owner, repo }) {
       },
     );
 
-    yield put(getRepoDetailsSuccessAction(details));
+    yield put(
+      getRepoDetailsSuccessAction({
+        name: details.name,
+        description: details.description,
+        htmlUrl: details.html_url,
+        stargazersCount: details.stargazers_count,
+      }),
+    );
   } catch {
     yield put(getRepoDetailsErrorAction());
   }
