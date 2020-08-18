@@ -31,6 +31,11 @@ const StatsPage = ({ getRepoDetails, repoDetails, repoDetailsLoaded }) => {
       {repoDetailsLoaded && (
         <>
           <p>
+            The stats you see below were requested asyncronously from GitHub
+            when you landed on the stats page and stored in redux so they
+            won&apos;t need to be requested again unless you reload the app.
+          </p>
+          <p>
             <A href={repoDetails.htmlUrl} title={repoDetails.description}>
               {repoDetails.name}
             </A>{' '}
