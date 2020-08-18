@@ -1,65 +1,47 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { compose } from 'redux';
-import { createStructuredSelector } from 'reselect';
 
-import { getRepoDetailsAction } from './actions';
-import { selectRepoDetails, selectRepoDetailsLoaded } from './selectors';
+import { A } from 'components/Link';
 
-const HomePage = ({ getRepoDetails, repoDetails, repoDetailsLoaded }) => {
-  useEffect(() => {
-    if (!repoDetailsLoaded) {
-      getRepoDetails({ owner: 'bstaruk', repo: 'starbase-react' });
-    }
-  }, []);
+const HomePage = () => (
+  <>
+    <Helmet>
+      <title>About</title>
+    </Helmet>
 
-  return (
-    <>
-      <Helmet>
-        <title>Home</title>
-      </Helmet>
+    <p>
+      starbase-react is open source and completely free for personal or
+      commercial use. It is a personal project-- a living code styleguide and
+      outlet for technical exploration that you can make your own if you dig it.
+      Pick it up, check it out and make it do a barrel roll.
+    </p>
+    <p>
+      starbase-react enables developers to spin up new React projects and begin
+      coding within minutes instead of hours. It is ready, right out of the box,
+      to watch your code during development and can handle production builds
+      when you&apos;re ready to integrate and/or deploy.
+    </p>
 
-      {repoDetailsLoaded && (
-        <>
-          <p>
-            {repoDetails.name} is open source and completely free for personal
-            or commercial use. It is a personal project-- a living code
-            styleguide and outlet for technical exploration that you can make
-            your own if you dig it. Pick it up, check it out and make it do a
-            barrel roll.
-          </p>
-          <p>
-            {repoDetails.name} enables developers to spin up new React projects
-            and begin coding within minutes instead of hours. It is ready, right
-            out of the box, to watch your code during development and can handle
-            production builds when you&apos;re ready to integrate and/or deploy.
-          </p>
-        </>
-      )}
-    </>
-  );
-};
+    <p>
+      The <code>start</code> command uses{' '}
+      <A
+        href="https://github.com/webpack/webpack-dev-server"
+        title="webpack-dev-server on github"
+      >
+        webpack-dev-server
+      </A>{' '}
+      to serve up your project on a development server (localhost) which will
+      recompile and lint as you modify the source. You can even access this web
+      server via LAN, with a static IP, for testing your app on multiple
+      devices.
+    </p>
 
-HomePage.propTypes = {
-  getRepoDetails: PropTypes.func.isRequired,
-  repoDetails: PropTypes.object.isRequired,
-  repoDetailsLoaded: PropTypes.bool.isRequired,
-};
+    <p>
+      The <code>build</code> command will compile production-ready (linted,
+      minified &amp; optimized) assets that can be integrated into your CMS
+      theme or used as a standalone static website.
+    </p>
+  </>
+);
 
-const mapStateToProps = createStructuredSelector({
-  repoDetails: selectRepoDetails(),
-  repoDetailsLoaded: selectRepoDetailsLoaded(),
-});
-
-function mapDispatchToProps(dispatch) {
-  return {
-    getRepoDetails: ({ owner, repo }) =>
-      dispatch(getRepoDetailsAction({ owner, repo })),
-  };
-}
-
-const withConnect = connect(mapStateToProps, mapDispatchToProps);
-
-export default compose(withConnect)(HomePage);
+export default HomePage;

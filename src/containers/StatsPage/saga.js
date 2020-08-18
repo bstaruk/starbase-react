@@ -23,6 +23,7 @@ export function* getRepoDetailsSaga({ owner, repo }) {
         description: details.description,
         htmlUrl: details.html_url,
         stargazersCount: details.stargazers_count,
+        forksCount: details.forks_count,
       }),
     );
   } catch {
@@ -30,6 +31,6 @@ export function* getRepoDetailsSaga({ owner, repo }) {
   }
 }
 
-export default function* homePageSaga() {
+export default function* statsPageSaga() {
   yield all([takeLatest(GET_REPO_DETAILS, getRepoDetailsSaga)]);
 }

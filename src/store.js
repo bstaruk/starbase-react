@@ -2,15 +2,15 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 // import reducers (ctrl+f "SETUP REDUCERS")
-import homePageReducer from 'containers/HomePage/reducer';
+import statsPageReducer from 'containers/StatsPage/reducer';
 
 // import sagas (ctrl+f "SETUP SAGAS")
-import getHomePageSaga from 'containers/HomePage/saga';
+import getStatsPageSaga from 'containers/StatsPage/saga';
 
 function createReducer(injectedReducers = {}) {
   // SETUP REDUCERS HERE
   const rootReducer = combineReducers({
-    homePage: homePageReducer,
+    statsPage: statsPageReducer,
     ...injectedReducers,
   });
 
@@ -46,7 +46,7 @@ export default function configureStore() {
   store.runSaga = sagaMiddleware.run;
 
   // SETUP SAGAS HERE
-  store.runSaga(getHomePageSaga);
+  store.runSaga(getStatsPageSaga);
 
   return store;
 }

@@ -11,7 +11,7 @@ export const initialState = {
 };
 
 /* eslint-disable default-case, no-param-reassign */
-const homePageReducer = (state = initialState, action) =>
+const statsPageReducer = (state = initialState, action) =>
   produce(state, (draft) => {
     switch (action.type) {
       case GET_REPO_DETAILS:
@@ -31,4 +31,4 @@ const homePageReducer = (state = initialState, action) =>
     }
   });
 
-export default homePageReducer;
+export default statsPageReducer;

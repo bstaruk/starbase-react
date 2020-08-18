@@ -1,13 +1,13 @@
 import { createSelector } from 'reselect';
 import { initialState } from './reducer';
 
-export const selectHomePageDomain = (state) => state.homePage || initialState;
+export const selectStatsPageDomain = (state) => state.statsPage || initialState;
 
 export const selectRepoDetails = () =>
-  createSelector(selectHomePageDomain, (substate) => substate.repoDetails);
+  createSelector(selectStatsPageDomain, (substate) => substate.repoDetails);
 
 export const selectRepoDetailsLoaded = () =>
   createSelector(
-    selectHomePageDomain,
+    selectStatsPageDomain,
     (substate) => substate.repoDetailsLoaded,
   );

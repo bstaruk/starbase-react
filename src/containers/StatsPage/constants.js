@@ -1,4 +1,4 @@
-const path = 'app/HomePage';
+const path = 'app/StatsPage';
 
 export const GET_REPO_DETAILS = `${path}/GET_REPO_DETAILS`;
 export const GET_REPO_DETAILS_ERROR = `${path}/GET_REPO_DETAILS_ERROR`;
