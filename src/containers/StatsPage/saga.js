@@ -23,6 +23,7 @@ export function* getRepoDetailsSaga({ owner, repo }) {
         description: details.description,
         htmlUrl: details.html_url,
         stargazersCount: details.stargazers_count,
+        forksCount: details.forks_count,
       }),
     );
   } catch {

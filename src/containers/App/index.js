@@ -6,7 +6,7 @@ import PageFooter from 'components/PageFooter';
 import PageHeader from 'components/PageHeader';
 
 import HomePage from 'containers/HomePage';
-import AboutPage from 'containers/AboutPage';
+import StatsPage from 'containers/StatsPage';
 
 import ThemeProvider, { GlobalStyle } from './Theme';
 
@@ -28,7 +28,7 @@ const App = () => (
 
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
+          <Route path="/stats" component={StatsPage} />
         </Switch>
 
         <PageFooter />

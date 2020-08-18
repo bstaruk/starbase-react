@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 
+import { A } from 'components/Link';
+
 import { getRepoDetailsAction } from './actions';
 import { selectRepoDetails, selectRepoDetailsLoaded } from './selectors';
 
@@ -18,23 +20,22 @@ const StatsPage = ({ getRepoDetails, repoDetails, repoDetailsLoaded }) => {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>Stats</title>
       </Helmet>
+
+      <p>
+        This page is here to give react-router and redux-saga something to work
+        with.
+      </p>
 
       {repoDetailsLoaded && (
         <>
           <p>
-            {repoDetails.name} is open source and completely free for personal
-            or commercial use. It is a personal project-- a living code
-            styleguide and outlet for technical exploration that you can make
-            your own if you dig it. Pick it up, check it out and make it do a
-            barrel roll.
-          </p>
-          <p>
-            {repoDetails.name} enables developers to spin up new React projects
-            and begin coding within minutes instead of hours. It is ready, right
-            out of the box, to watch your code during development and can handle
-            production builds when you&apos;re ready to integrate and/or deploy.
+            <A href={repoDetails.htmlUrl} title={repoDetails.description}>
+              {repoDetails.name}
+            </A>{' '}
+            has {repoDetails.stargazersCount} stargazers and has been forked{' '}
+            {repoDetails.forksCount} times.
           </p>
         </>
       )}

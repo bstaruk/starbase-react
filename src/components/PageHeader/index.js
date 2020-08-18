@@ -38,15 +38,15 @@ const PageHeader = ({ title }) => (
           <HeaderLink
             linkTo="/"
             title="a brief history of starbase-react-- it's got electrolytes!"
-            label="Why it's here"
+            label="Home"
           />
         </li>
 
         <li>
           <HeaderLink
-            linkTo="/about"
+            linkTo="/stats"
             title="an overview of starbase-react"
-            label="What it does"
+            label="Stats"
           />
         </li>
       </ul>
