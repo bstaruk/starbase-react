@@ -7,6 +7,7 @@ import {
 
 export const initialState = {
   repoDetails: {},
+  repoDetailsError: '',
   repoDetailsLoaded: false,
 };
 
@@ -15,8 +16,9 @@ const statsPageReducer = (state = initialState, action) =>
   produce(state, (draft) => {
     switch (action.type) {
       case GET_REPO_DETAILS:
-        draft.repoDetails = {};
-        draft.repoDetailsLoaded = false;
+        draft.repoDetails = initialState.repoDetails;
+        draft.repoDetailsError = initialState.repoDetailsError;
+        draft.repoDetailsLoaded = initialState.repoDetailsLoaded;
         break;
 
       case GET_REPO_DETAILS_SUCCESS:
@@ -25,8 +27,8 @@ const statsPageReducer = (state = initialState, action) =>
         break;
 
       case GET_REPO_DETAILS_ERROR:
-        draft.repoDetails = {};
-        draft.repoDetailsLoaded = true;
+        draft.repoDetailsError = action.payload;
+        draft.repoDetailsLoaded = false;
         break;
     }
   });

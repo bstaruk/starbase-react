@@ -11,3 +11,9 @@ export const selectRepoDetailsLoaded = () =>
     selectStatsPageDomain,
     (substate) => substate.repoDetailsLoaded,
   );
+
+export const selectRepoDetailsError = () =>
+  createSelector(
+    selectStatsPageDomain,
+    (substate) => substate.repoDetailsError,
+  );

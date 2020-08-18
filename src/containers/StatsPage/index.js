@@ -8,9 +8,18 @@ import { createStructuredSelector } from 'reselect';
 import { A } from 'components/Link';
 
 import { getRepoDetailsAction } from './actions';
-import { selectRepoDetails, selectRepoDetailsLoaded } from './selectors';
+import {
+  selectRepoDetails,
+  selectRepoDetailsError,
+  selectRepoDetailsLoaded,
+} from './selectors';
 
-const StatsPage = ({ getRepoDetails, repoDetails, repoDetailsLoaded }) => {
+const StatsPage = ({
+  getRepoDetails,
+  repoDetails,
+  repoDetailsError,
+  repoDetailsLoaded,
+}) => {
   useEffect(() => {
     if (!repoDetailsLoaded) {
       getRepoDetails({ owner: 'bstaruk', repo: 'starbase-react' });
@@ -44,6 +53,16 @@ const StatsPage = ({ getRepoDetails, repoDetails, repoDetailsLoaded }) => {
           </p>
         </>
       )}
+
+      {repoDetailsError && (
+        <>
+          <p>
+            The app encountered an error while attempting to retrieve the stats
+            for starbase-react: <br />
+            <em>{repoDetailsError}</em>
+          </p>
+        </>
+      )}
     </>
   );
 };
@@ -51,11 +70,13 @@ const StatsPage = ({ getRepoDetails, repoDetails, repoDetailsLoaded }) => {
 StatsPage.propTypes = {
   getRepoDetails: PropTypes.func.isRequired,
   repoDetails: PropTypes.object.isRequired,
+  repoDetailsError: PropTypes.string.isRequired,
   repoDetailsLoaded: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   repoDetails: selectRepoDetails(),
+  repoDetailsError: selectRepoDetailsError(),
   repoDetailsLoaded: selectRepoDetailsLoaded(),
 });
 

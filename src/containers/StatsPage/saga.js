@@ -26,8 +26,13 @@ export function* getRepoDetailsSaga({ owner, repo }) {
         forksCount: details.forks_count,
       }),
     );
-  } catch {
-    yield put(getRepoDetailsErrorAction());
+  } catch ({ json, status }) {
+    if (json) {
+      const data = yield json;
+      yield put(getRepoDetailsErrorAction(data.message || 'Error!'));
+    } else {
+      yield put(getRepoDetailsErrorAction('Error!'));
+    }
   }
 }
 
