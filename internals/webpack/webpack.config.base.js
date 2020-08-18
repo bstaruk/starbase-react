@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  context: path.resolve(__dirname, '../../src'),
+  context: path.resolve(process.cwd(), 'src'),
   entry: {
     app: [path.join(process.cwd(), 'src/app.js')],
   },
@@ -12,12 +12,13 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
+    modules: ['node_modules', path.resolve(process.cwd(), 'src')],
     alias: {
       '@components': path.join(process.cwd(), 'src/components'),
       '@containers': path.join(process.cwd(), 'src/containers'),
       '@utils': path.join(process.cwd(), 'src/utils'),
     },
-    extensions: ['.js', '.jsx', '.json', '.css'],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
