@@ -5,16 +5,17 @@ const path = require('path');
 module.exports = {
   context: path.resolve(__dirname, '../../src'),
   entry: {
-    app: ['./app.js'],
+    app: [path.join(process.cwd(), 'src/app.js')],
   },
   output: {
-    path: path.resolve(__dirname, '../../dist'),
+    path: path.resolve(process.cwd(), 'dist'),
+    publicPath: '/',
   },
   resolve: {
     alias: {
-      '@components': path.resolve(__dirname, '../../src/components'),
-      '@containers': path.resolve(__dirname, '../../src/containers'),
-      '@utils': path.resolve(__dirname, '../../src/utils'),
+      '@components': path.join(process.cwd(), 'src/components'),
+      '@containers': path.join(process.cwd(), 'src/containers'),
+      '@utils': path.join(process.cwd(), 'src/utils'),
     },
     extensions: ['.js', '.jsx', '.json', '.css'],
   },
@@ -71,9 +72,8 @@ module.exports = {
       NODE_ENV: 'development',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../../src/index.html'),
-      filename: 'index.html',
-      favicon: path.resolve(__dirname, '../../src/images/favicon.png'),
+      template: 'index.html',
+      favicon: 'images/favicon.png',
     }),
   ],
 };

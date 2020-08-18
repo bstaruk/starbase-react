@@ -6,16 +6,16 @@ const webpackConfigBase = require('./webpack.config.base.js');
 
 module.exports = merge(webpackConfigBase, {
   mode: 'development',
+  output: {
+    filename: '[name].js',
+  },
+  devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, '../../dist'),
+    contentBase: path.join(process.cwd(), 'dist'),
     historyApiFallback: true,
     port: 3000,
     stats: {
       children: false,
     },
-  },
-  devtool: 'inline-source-map',
-  output: {
-    filename: '[name].js',
   },
 });
