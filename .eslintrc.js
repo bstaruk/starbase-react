@@ -8,23 +8,28 @@ const prettierOptions = JSON.parse(
 module.exports = {
   parser: 'babel-eslint',
   extends: ['airbnb', 'prettier', 'prettier/react'],
-  plugins: ['prettier', 'import'],
+  plugins: ['prettier', 'redux-saga', 'import'],
   rules: {
     'prettier/prettier': ['error', prettierOptions],
     'import/no-extraneous-dependencies': 0,
+    'import/prefer-default-export': 0,
     'react/jsx-filename-extension': 0,
+    'react/forbid-prop-types': 0,
+  },
+  env: {
+    jest: true,
+    browser: true,
+    node: true,
+    es6: true,
   },
   globals: {
-    document: true,
-    window: true,
-    location: true,
     React: true,
     PropTypes: true,
   },
   settings: {
     'import/resolver': {
       webpack: {
-        config: 'webpack/webpack.config.base.js',
+        config: './internals/webpack/webpack.config.prod.js',
       },
     },
   },

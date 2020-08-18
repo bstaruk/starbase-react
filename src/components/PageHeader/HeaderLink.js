@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from '@components/Link';
+import { NavLink } from 'components/Link';
 
 const HeaderLink = ({ label, linkTo, title }) => (
   <NavLink exact to={linkTo} title={title} activeClassName="active">

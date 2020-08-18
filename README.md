@@ -4,16 +4,15 @@
 [![dependencies status](https://david-dm.org/bstaruk/starbase-react/status.svg)](https://david-dm.org/bstaruk/starbase-react)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react?ref=badge_shield)
 
-starbase-react is an offline-first React 16 boilerplate that is built with webpack 4, styled-components & Babel 7. Get up and running in minutes using some of the most powerful front-end tools available in 2019:
+starbase-react is an offline-first React 16, redux, redux-saga & styled-components boilerplate. Get up and running in minutes using some of the most powerful front-end tools available in 2020:
 
-* [Node.js](https://github.com/nodejs/node) & [Yarn](https://github.com/yarnpkg)
-* [webpack 4](https://github.com/webpack/webpack) & [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-* [React 16](https://facebook.github.io/react/) w/ [React Router](https://github.com/ReactTraining/react-router) & [React Hot Loader](https://github.com/gaearon/react-hot-loader)
+* [webpack 4](https://github.cominternals/webpack) & [webpack-dev-server](https://github.cominternals/webpack-dev-server)
+* [React 16](https://facebook.github.io/react/) w/ [styled-components](https://github.com/styled-components/styled-components), [react-redux](https://github.com/reduxjs/react-redux) & [redux-saga](https://github.com/redux-saga/redux-saga/)
+* [react-testing-library](https://github.com/testing-library/react-testing-library) & [jest](https://github.com/facebook/jest)
 * [Babel 7](https://github.com/babel/babel) w/ [ESLint](https://github.com/eslint/eslint) & [Prettier](https://github.com/prettier/prettier)
-* [styled-components](https://github.com/styled-components/styled-components)
 * ...and more!
 
-starbase-react is a spin on [starbase](https://github.com/bstaruk/starbase), and intended to be relatively small in scope so that it may be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with React 16, webpack 4, styled-components and/or ES6.
+starbase-react is a spin on [starbase](https://github.com/bstaruk/starbase), and intended to be relatively small in scope so that it may be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with React 16, redux, redux-saga, style-components, webpack 4 and/or ES6.
 
 ## license
 
@@ -32,7 +31,7 @@ After completing the steps below, you will be ready to begin using starbase-reac
 
 ### local development
 
-starbase-react uses [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to serve up your project at [http://localhost:3000](http://localhost:3000) for streamlined and convenient development.
+starbase-react uses [webpack-dev-server](https://github.cominternals/webpack-dev-server) to serve up your project at [http://localhost:3000](http://localhost:3000) for streamlined and convenient development.
 
 After running `npm run start` in the project root, your `/src` code will be served at the url above and watched for changes. As you modify code in `/src`, the project will be recompiled and your browser will refresh to show the latest changes.
 
@@ -64,24 +63,11 @@ Removing hashing for production builds is not recommended.
 
 starbase-react is setup to clear all contents of `/dist` (where compiled assets are piped into) during each `npm run build`. If you'd like to remove this part of the build process, perform the following steps:
 
-1. remove `CleanWebpackPlugin` from the plugins array in `/webpack/webpack.config.prod.js`
-2. remove `CleanWebpackPlugin` as a requirement at the top of `/webpack/webpack.config.prod.js`
+1. remove `CleanWebpackPlugin` from the plugins array in `/internalsinternals/webpack.config.prod.js`
+2. remove `CleanWebpackPlugin` as a requirement at the top of `/internalsinternals/webpack.config.prod.js`
 3. remove the `CleanWebpackPlugin` dependency from `/package.json`
 
 Removing the cleanup process means that deleted assets in `/src` will not be deleted in `/dist` until you manually do so. I recommend keeping the cleanup process intact unless you have a specific reason not to, such as having un-managed assets in `/dist`.
-
-### fetch & promise polyfills
-
-Because starbase-react was built to accommodate ES6 & CommonJS (and not jQuery) it is assumed that you'll be using [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) for asynchronous requests.
-
-Fetch is supported in all modern browsers, but some old dogs still don't support it and that's what we need the [es6-promise](https://github.com/stefanpenner/es6-promise) & [whatwg-fetch](https://github.com/github/fetch) polyfills for.
-
-These polyfills come commented-out by default in `/src/app.js`, so they won't end up in your production code until you actually use fetch somewhere, at which time you should un-comment-out the polyfills.
-
-If you want to remove these for any reason, perform the following steps:
-
-1. remove `es6-promise` & `whatwg-fetch` from `/package.json`
-2. remove the lines in `/src/app.js` that fall under the "fetch & promise polyfills" comment (it'll be obvious which ones)
 
 ## features you may want to customize
 
@@ -103,7 +89,7 @@ After completing the steps above, the only rules that eslint will enforce are th
 
 ### prettier js formatting
 
-starbase uses [Prettier](https://github.com/prettier/prettier) to enforce and simplify code consistency. If you use VS Code, check out the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+starbase uses [Prettier](https://github.com/prettier/prettier) to enforce and simplify code consistency. If you use VS Code, check out the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) which will allow you to easily format your code to the project specifications with a hotkey.
 
 ### service worker caching
 
@@ -118,9 +104,8 @@ You may see an info log entry in your console from `offline-plugin` while using 
 #### to remove offline-plugin:
 
 1. in `/package.json`, remove the `offline-plugin` dependency
-2. in `/webpack/webpack.config.base.js`, remove all references to `OfflinePlugin` and/or `offline-plugin`
+2. in `/internals/webpack/webpack.config.base.js`, remove all references to `OfflinePlugin` and/or `offline-plugin`
 3. in `/src/app.js`, remove the `import` statement that references `offline-plugin`
-4. delete `/src/app/lib/offline-plugin.js`
 
 _There is no consequence to removing this feature, besides limiting offline access to your project._
 

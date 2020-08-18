@@ -1,11 +1,14 @@
 import React from 'react';
-import { hot } from 'react-hot-loader/root';
-import { ThemeProvider } from 'styled-components';
 import { Helmet } from 'react-helmet';
+import { Switch, Route } from 'react-router-dom';
 
-import Main from './Main';
-import GlobalStyle from './global-styles';
-import primaryTheme from './theme/primary';
+import PageFooter from 'components/PageFooter';
+import PageHeader from 'components/PageHeader';
+
+import HomePage from 'containers/HomePage';
+import StatsPage from 'containers/StatsPage';
+
+import ThemeProvider, { GlobalStyle } from './Theme';
 
 const App = () => (
   <>
@@ -19,11 +22,20 @@ const App = () => (
       />
     </Helmet>
 
-    <ThemeProvider theme={primaryTheme}>
-      <Main />
+    <ThemeProvider>
+      <>
+        <PageHeader title="starbase-react" />
+
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/stats" component={StatsPage} />
+        </Switch>
+
+        <PageFooter />
+      </>
       <GlobalStyle />
     </ThemeProvider>
   </>
 );
 
-export default hot(App);
+export default App;

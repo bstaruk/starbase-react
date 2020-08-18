@@ -3,20 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  context: path.resolve(__dirname, '../src'),
+  context: path.resolve(process.cwd(), 'src'),
   entry: {
-    app: ['react-hot-loader/patch', './app.js'],
+    app: [path.join(process.cwd(), 'src/app.js')],
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(process.cwd(), 'dist'),
+    publicPath: '/',
   },
   resolve: {
-    alias: {
-      '@components': path.resolve(__dirname, '../src/components'),
-      '@containers': path.resolve(__dirname, '../src/containers'),
-      'react-dom': '@hot-loader/react-dom',
-    },
-    extensions: ['.js', '.jsx', '.json', '.css'],
+    modules: ['node_modules', path.resolve(process.cwd(), 'src')],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -67,14 +64,12 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../src/templates/index.html'),
-      filename: 'index.html',
-      favicon: path.resolve(__dirname, '../src/templates/images/favicon.png'),
+      template: 'index.html',
+      favicon: 'images/favicon.png',
     }),
   ],
 };
