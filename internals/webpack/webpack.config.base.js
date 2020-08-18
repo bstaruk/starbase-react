@@ -13,9 +13,9 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@components': path.resolve(__dirname, '../../src/components'),
-      '@containers': path.resolve(__dirname, '../../src/containers'),
-      '@utils': path.resolve(__dirname, '../../src/utils'),
+      '@components': path.join(process.cwd(), 'src/components'),
+      '@containers': path.join(process.cwd(), 'src/containers'),
+      '@utils': path.join(process.cwd(), 'src/utils'),
     },
     extensions: ['.js', '.jsx', '.json', '.css'],
   },
