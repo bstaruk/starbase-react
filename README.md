@@ -89,7 +89,7 @@ After completing the steps above, the only rules that eslint will enforce are th
 
 ### prettier js formatting
 
-starbase uses [Prettier](https://github.com/prettier/prettier) to enforce and simplify code consistency. If you use VS Code, check out the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+starbase uses [Prettier](https://github.com/prettier/prettier) to enforce and simplify code consistency. If you use VS Code, check out the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) which will allow you to easily format your code to the project specifications with a hotkey.
 
 ### service worker caching
 
@@ -106,7 +106,6 @@ You may see an info log entry in your console from `offline-plugin` while using 
 1. in `/package.json`, remove the `offline-plugin` dependency
 2. in `/internals/webpack/webpack.config.base.js`, remove all references to `OfflinePlugin` and/or `offline-plugin`
 3. in `/src/app.js`, remove the `import` statement that references `offline-plugin`
-4. delete `/src/app/lib/offline-plugin.js`
 
 _There is no consequence to removing this feature, besides limiting offline access to your project._
 
