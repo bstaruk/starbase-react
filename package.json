@@ -9,7 +9,7 @@
       "url": "https://brian.staruk.net"
     }
   ],
-  "description": "an offline-first React 16 boilerplate w/ styled-components, webpack 4, Babel 7 (ES6+) & more",
+  "description": "an offline-first React 16, redux, redux-saga & styled-components boilerplate",
   "homepage": "https://github.com/bstaruk/starbase-react",
   "repository": {
     "type": "git",
