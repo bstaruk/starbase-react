@@ -1,5 +1,5 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
-import request from '@utils/request';
+import request from 'utils/request';
 
 import { GET_REPO_DETAILS } from './constants';
 import {

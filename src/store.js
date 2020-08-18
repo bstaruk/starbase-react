@@ -2,10 +2,10 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 // import reducers (ctrl+f "SETUP REDUCERS")
-import homePageReducer from '@containers/HomePage/reducer';
+import homePageReducer from 'containers/HomePage/reducer';
 
 // import sagas (ctrl+f "SETUP SAGAS")
-import getHomePageSaga from '@containers/HomePage/saga';
+import getHomePageSaga from 'containers/HomePage/saga';
 
 function createReducer(injectedReducers = {}) {
   // SETUP REDUCERS HERE

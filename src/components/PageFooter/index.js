@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { A } from '@components/Link';
+import { A } from 'components/Link';
 
 const Wrapper = styled.footer`
   margin-top: 2.5rem;

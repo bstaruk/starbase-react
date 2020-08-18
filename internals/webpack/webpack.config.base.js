@@ -13,11 +13,6 @@ module.exports = {
   },
   resolve: {
     modules: ['node_modules', path.resolve(process.cwd(), 'src')],
-    alias: {
-      '@components': path.join(process.cwd(), 'src/components'),
-      '@containers': path.join(process.cwd(), 'src/containers'),
-      '@utils': path.join(process.cwd(), 'src/utils'),
-    },
     extensions: ['.js', '.jsx'],
   },
   module: {

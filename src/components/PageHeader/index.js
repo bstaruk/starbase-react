@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { H1 } from '@components/Heading';
+import { H1 } from 'components/Heading';
 
 import HeaderLink from './HeaderLink';
 import logo from './assets/starbase.png';

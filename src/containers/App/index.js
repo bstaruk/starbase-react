@@ -2,11 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 
-import PageFooter from '@components/PageFooter';
-import PageHeader from '@components/PageHeader';
+import PageFooter from 'components/PageFooter';
+import PageHeader from 'components/PageHeader';
 
-import HomePage from '@containers/HomePage';
-import AboutPage from '@containers/AboutPage';
+import HomePage from 'containers/HomePage';
+import AboutPage from 'containers/AboutPage';
 
 import ThemeProvider, { GlobalStyle } from './Theme';
 

@@ -1,6 +1,6 @@
 /**
  * Example Usage:
- * import ThemeProvider, { primaryTheme, GlobalStyle } from '@containers/App/Theme';
+ * import ThemeProvider, { primaryTheme, GlobalStyle } from 'containers/App/Theme';
  */
 
 export { default as GlobalStyle } from './GlobalStyle';

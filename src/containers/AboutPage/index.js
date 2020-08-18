@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { A } from '@components/Link';
+import { A } from 'components/Link';
 
 const AboutPage = () => (
   <>

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 
-import App from '@containers/App';
+import App from 'containers/App';
 
 import configureStore from './store';
 

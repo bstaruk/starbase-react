@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import ThemeProvider from '@containers/App/Theme';
+import ThemeProvider from 'containers/App/Theme';
 
 import PageHeader from '../index';
 
