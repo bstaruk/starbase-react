@@ -11,7 +11,6 @@ const Wrapper = styled.footer`
 
 const PageFooter = () => (
   <Wrapper role="contentinfo">
-    {' '}
     <p>
       crafted in boston by{' '}
       <A
@@ -20,8 +19,8 @@ const PageFooter = () => (
         className="h-card"
       >
         brian staruk
-      </A>{' '}
-      |{' '}
+      </A>
+      {' | '}
       <A
         href="https://github.com/bstaruk/starbase-react"
         title="learn more about starbase-react on github"
