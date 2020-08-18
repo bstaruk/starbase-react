@@ -26,10 +26,10 @@ const PageHeader = ({ title }) => (
     </BrandWrapper>
 
     <p>
-      starbase-react is an open source React 16, styled-components &amp; webpack
-      4 boilerplate for front-end web developers, with a small footprint and
-      plenty of room for cream and sugar-- stir it up and make it just how you
-      like it!
+      starbase-react is an open source React 16, redux, redux-saga,
+      styled-components &amp; webpack 4 boilerplate for front-end web
+      developers, with a small footprint and plenty of room for cream and
+      sugar-- stir it up and make it just how you like it!
     </p>
 
     <nav>

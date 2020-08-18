@@ -21,9 +21,23 @@ const HomePage = ({ getRepoDetails, repoDetails, repoDetailsLoaded }) => {
         <title>Home</title>
       </Helmet>
 
-      <p>home</p>
-
-      {repoDetailsLoaded && <p>{repoDetails.name}</p>}
+      {repoDetailsLoaded && (
+        <>
+          <p>
+            {repoDetails.name} is open source and completely free for personal
+            or commercial use. It is a personal project-- a living code
+            styleguide and outlet for technical exploration that you can make
+            your own if you dig it. Pick it up, check it out and make it do a
+            barrel roll.
+          </p>
+          <p>
+            {repoDetails.name} enables developers to spin up new React projects
+            and begin coding within minutes instead of hours. It is ready, right
+            out of the box, to watch your code during development and can handle
+            production builds when you&apos;re ready to integrate and/or deploy.
+          </p>
+        </>
+      )}
     </>
   );
 };
