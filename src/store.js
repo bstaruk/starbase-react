@@ -1,5 +1,7 @@
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
 import createSagaMiddleware from 'redux-saga';
+import history from 'utils/history';
 
 // import reducers (ctrl+f "SETUP REDUCERS")
 import statsPageReducer from 'containers/StatsPage/reducer';
@@ -10,6 +12,7 @@ import getStatsPageSaga from 'containers/StatsPage/saga';
 function createReducer(injectedReducers = {}) {
   // SETUP REDUCERS HERE
   const rootReducer = combineReducers({
+    router: connectRouter(history),
     statsPage: statsPageReducer,
     ...injectedReducers,
   });
@@ -18,7 +21,7 @@ function createReducer(injectedReducers = {}) {
 }
 
 // main redux config function that's passed back to app.js
-export default function configureStore() {
+export default function configureStore(routerHistory) {
   let composeEnhancers = compose;
   const reduxSagaMonitorOptions = {};
 
@@ -32,7 +35,7 @@ export default function configureStore() {
   const sagaMiddleware = createSagaMiddleware(reduxSagaMonitorOptions);
 
   // create middlewares array & apply them
-  const middlewares = [sagaMiddleware];
+  const middlewares = [sagaMiddleware, routerMiddleware(routerHistory)];
   const enhancers = [applyMiddleware(...middlewares)];
 
   // it's alive!
