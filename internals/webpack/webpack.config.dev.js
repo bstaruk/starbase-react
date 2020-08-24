@@ -9,7 +9,7 @@ module.exports = merge(webpackConfigBase, {
   output: {
     filename: '[name].js',
   },
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
   devServer: {
     contentBase: path.join(process.cwd(), 'dist'),
     historyApiFallback: true,
