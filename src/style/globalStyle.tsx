@@ -1,6 +1,12 @@
 import { css } from '@emotion/react'
 
 const globalStyles = css`
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',

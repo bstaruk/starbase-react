@@ -6,14 +6,14 @@ export const Wrapper = styled.div`
 `
 
 export const HeaderWrapper = styled.header`
-  background-color: #282c34;
+  background-color: ${(p) => p.theme.colors.background};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: ${(p) => p.theme.colors.white};
 `
 
 const appLogoSpin = keyframes`
@@ -32,5 +32,5 @@ export const LogoWrapper = styled.img`
 `
 
 export const LinkWrapper = styled.a`
-  color: #61dafb;
+  color: ${(p) => p.theme.colors.cyan};
 `
