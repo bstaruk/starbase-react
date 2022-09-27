@@ -15,7 +15,8 @@ export const counterSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
-    setCount: (state, action: PayloadAction<number>) => {
+    setCount: (state, action: PayloadAction<number>) => {}, // eslint-disable-line
+    setCountSuccess: (state, action: PayloadAction<number>) => {
       state.count = action.payload;
     },
   },
