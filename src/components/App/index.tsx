@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from '../Counter';
 import logo from './logo.svg';
 import { Wrapper, HeaderWrapper, LogoWrapper, LinkWrapper } from './wrappers';
 
@@ -14,6 +15,8 @@ function App() {
           Learn React
         </LinkWrapper>
       </HeaderWrapper>
+
+      <Counter />
     </Wrapper>
   );
 }
