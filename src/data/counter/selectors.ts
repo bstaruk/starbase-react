@@ -5,4 +5,4 @@ import { initialState, sliceKey } from './slice';
 
 const selectDomain = (state: RootState) => state[sliceKey] || initialState;
 
-export const selectCount = createSelector([selectDomain], state => state.value);
+export const selectCount = createSelector([selectDomain], state => state.count);

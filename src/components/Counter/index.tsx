@@ -8,23 +8,23 @@ const Counter = () => {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
 
+  const onMinusClick = () => {
+    dispatch(counterActions.setCount(count - 1));
+  };
+
+  const onPlusClick = () => {
+    dispatch(counterActions.setCount(count + 1));
+  };
+
   return (
     <Wrapper>
-      <ButtonWrapper
-        aria-label="Decrement value"
-        onClick={() => dispatch(counterActions.decrement())}
-        disabled={count < 1}
-      >
+      <ButtonWrapper aria-label="Decrement value" onClick={onMinusClick} disabled={count < 1}>
         Decrement
       </ButtonWrapper>
 
       <ValueWrapper>{count}</ValueWrapper>
 
-      <ButtonWrapper
-        aria-label="Increment value"
-        onClick={() => dispatch(counterActions.increment())}
-        disabled={count >= 10}
-      >
+      <ButtonWrapper aria-label="Increment value" onClick={onPlusClick} disabled={count >= 10}>
         Increment
       </ButtonWrapper>
     </Wrapper>
