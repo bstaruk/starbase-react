@@ -17,7 +17,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "@emotion", "prettier"],
   "rules": {},
   "settings": {
     "import/resolver": {
