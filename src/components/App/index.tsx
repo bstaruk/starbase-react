@@ -1,5 +1,6 @@
 import React from 'react';
-import Counter from '../Counter';
+
+import Counter from 'components/Counter';
 import logo from './logo.svg';
 import { Wrapper, HeaderWrapper, LogoWrapper, LinkWrapper } from './wrappers';
 
