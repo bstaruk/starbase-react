@@ -1,19 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Wrapper, HeaderWrapper, LogoWrapper, LinkWrapper } from './wrappers';
+
+import Counter from 'components/Counter';
+import { Wrapper, HeadingWrapper } from './wrappers';
 
 function App() {
   return (
     <Wrapper>
-      <HeaderWrapper>
-        <LogoWrapper src={logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <LinkWrapper href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </LinkWrapper>
-      </HeaderWrapper>
+      <HeadingWrapper>Hello World</HeadingWrapper>
+
+      <Counter />
     </Wrapper>
   );
 }
