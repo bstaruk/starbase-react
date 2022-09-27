@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@emotion/eslint-plugin": "^11.10.0",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
     "eslint": "^8.24.0",
