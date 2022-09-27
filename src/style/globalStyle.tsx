@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import { css } from '@emotion/react';
 
 const globalStyles = css`
   * {
@@ -18,6 +18,6 @@ const globalStyles = css`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
-`
+`;
 
-export default globalStyles
+export default globalStyles;

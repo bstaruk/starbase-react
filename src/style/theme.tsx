@@ -12,6 +12,6 @@ const theme = {
     white: '#F8F8F2',
     yellow: '#F1FA8C',
   },
-}
+};
 
-export default theme
+export default theme;
