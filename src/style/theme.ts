@@ -1,4 +1,24 @@
-const theme = {
+import { Theme } from '@emotion/react';
+
+declare module '@emotion/react' {
+  export interface Theme {
+    colors: {
+      selectionBackground: string;
+      background: string;
+      foreground: string;
+      black: string;
+      blue: string;
+      cyan: string;
+      green: string;
+      purple: string;
+      red: string;
+      white: string;
+      yellow: string;
+    };
+  }
+}
+
+const theme: Theme = {
   colors: {
     selectionBackground: '#44475A',
     background: '#282A36',
