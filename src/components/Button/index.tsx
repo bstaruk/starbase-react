@@ -6,7 +6,7 @@ interface ButtonProps {
   ariaLabel?: string;
   children: string | JSX.Element;
   disabled?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button = ({ ariaLabel, children, disabled, onClick }: ButtonProps) => (
