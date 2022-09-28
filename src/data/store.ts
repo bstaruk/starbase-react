@@ -1,13 +1,13 @@
 import { configureStore, combineReducers, getDefaultMiddleware } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 
-import { counterSaga } from 'data/counter/saga';
-import { reducer as counterReducer } from 'data/counter/slice';
+import { appSaga } from 'data/app/saga';
+import { reducer as appReducer } from 'data/app/slice';
 
 const sagaMiddleware = createSagaMiddleware();
 
 const reducer = combineReducers({
-  counter: counterReducer,
+  app: appReducer,
 });
 
 export const store = configureStore({
@@ -15,7 +15,7 @@ export const store = configureStore({
   middleware: [...getDefaultMiddleware({ thunk: false }), sagaMiddleware],
 });
 
-sagaMiddleware.run(counterSaga);
+sagaMiddleware.run(appSaga);
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>;
