@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Routes, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage';
+import NotFoundPage from 'containers/NotFoundPage';
 
 const App = () => (
   <>
@@ -16,8 +17,7 @@ const App = () => (
 
     <Routes>
       <Route index element={<HomePage />} />
-      {/* TODO: Replace below with 404 Page */}
-      <Route path="*" element={<HomePage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   </>
 );
