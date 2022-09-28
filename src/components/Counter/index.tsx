@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectCount } from 'data/counter/selectors';
-import { actions as counterActions } from 'data/counter/slice';
+import { selectCount } from 'data/app/selectors';
+import { actions as appActions } from 'data/app/slice';
 import { Wrapper, ButtonWrapper, ValueWrapper } from './wrappers';
 
 const Counter = () => {
@@ -9,11 +9,11 @@ const Counter = () => {
   const dispatch = useDispatch();
 
   const onMinusClick = () => {
-    dispatch(counterActions.setCount(count - 1));
+    dispatch(appActions.setCount(count - 1));
   };
 
   const onPlusClick = () => {
-    dispatch(counterActions.setCount(count + 1));
+    dispatch(appActions.setCount(count + 1));
   };
 
   return (

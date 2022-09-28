@@ -7,6 +7,6 @@ export function* setCountSaga({ payload }: AnyAction) {
   yield put(actions.setCountSuccess(payload));
 }
 
-export function* counterSaga() {
+export function* appSaga() {
   yield all([takeLatest(actions.setCount.type, setCountSaga)]);
 }

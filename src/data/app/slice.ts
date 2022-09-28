@@ -1,18 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-// Define a type for the slice state
-interface CounterState {
+interface AppState {
   count: number;
 }
 
-// Define the initial state using that type
-export const initialState: CounterState = {
+export const initialState: AppState = {
   count: 0,
 };
 
-export const counterSlice = createSlice({
-  name: 'counter',
+export const appSlice = createSlice({
+  name: 'app',
   initialState,
   reducers: {
     setCount: (state, action: PayloadAction<number>) => {}, // eslint-disable-line
@@ -22,4 +20,4 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { actions, reducer, name: sliceKey } = counterSlice;
+export const { actions, reducer, name: sliceKey } = appSlice;
