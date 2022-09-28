@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from 'testUtils';
 import HomePage from './index';
 
 test('renders hello world', () => {
