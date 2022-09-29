@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectCount } from 'data/app/selectors';
 import { actions as appActions } from 'data/app/slice';
 import Button from 'components/Button';
-import { Wrapper, ValueWrapper } from './wrappers';
+import Text from 'components/Text';
+import { Wrapper } from './wrappers';
 
 const Counter = () => {
   const count = useSelector(selectCount);
@@ -24,7 +25,7 @@ const Counter = () => {
         Decrement
       </Button>
 
-      <ValueWrapper>{count}</ValueWrapper>
+      <Text>{count}</Text>
 
       <Button ariaLabel="Increment value" onClick={onPlusClick} disabled={count >= 10}>
         Increment
