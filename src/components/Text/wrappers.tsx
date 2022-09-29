@@ -3,5 +3,18 @@ import { TextProps } from './index';
 
 export const Wrapper = styled.div<TextProps>`
   color: ${p => p.theme.colors.white};
-  font-size: ${p => (p.variant === 'h1' ? '40px' : '17px')};
+
+  /* p */
+  ${p =>
+    p.variant === 'p' &&
+    `
+    font-size: 17px;
+  `}
+
+  /* h1 */
+  ${p =>
+    p.variant === 'h1' &&
+    `
+    font-size: 40px;
+  `}
 `;
