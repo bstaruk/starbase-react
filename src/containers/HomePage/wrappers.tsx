@@ -8,9 +8,11 @@ export const Wrapper = styled.div`
   min-height: 100vh;
 `;
 
-export const HeadingWrapper = styled.h1`
-  font-size: 42px;
-  font-weight: 700;
+export const HeaderWrapper = styled.header`
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+
+  > *:not(:last-child) {
+    margin-bottom: 8px;
+  }
 `;

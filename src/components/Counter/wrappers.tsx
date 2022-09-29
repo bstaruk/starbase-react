@@ -9,8 +9,3 @@ export const Wrapper = styled.div`
     margin-right: 16px;
   }
 `;
-
-export const ValueWrapper = styled.span`
-  font-size: 17px;
-  font-weight: 700;
-`;

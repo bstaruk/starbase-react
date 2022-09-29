@@ -20,7 +20,9 @@
     "sourceType": "module"
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "@emotion", "prettier"],
-  "rules": {},
+  "rules": {
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }]
+  },
   "settings": {
     "import/resolver": {
       "node": {
