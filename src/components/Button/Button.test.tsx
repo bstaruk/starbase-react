@@ -4,8 +4,8 @@ import Button from './index';
 
 test('renders label', () => {
   render(<Button>Hello World</Button>);
-  const helloWorldElement = screen.getByText(/hello world/i);
-  expect(helloWorldElement).toBeInTheDocument();
+  const el = screen.getByText(/hello world/i);
+  expect(el).toBeInTheDocument();
 });
 
 test('calls onClick prop when clicked', () => {
