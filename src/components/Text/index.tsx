@@ -4,7 +4,7 @@ import { Wrapper } from './wrappers';
 
 export interface TextProps {
   as?: React.ElementType;
-  children: string | JSX.Element;
+  children: string | number | JSX.Element;
   variant?: 'h1' | 'body';
 }
 
