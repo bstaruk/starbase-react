@@ -12,8 +12,10 @@ const HomePage = () => (
     </Helmet>
 
     <Wrapper>
-      <Text variant="h1">Hello World</Text>
-      <Text>Hello World</Text>
+      <Text as="h1" variant="h1">
+        Hello World
+      </Text>
+      <Text as="p">Hello World</Text>
       <Counter />
     </Wrapper>
   </>

@@ -4,9 +4,9 @@ import { TextProps } from './index';
 export const Wrapper = styled.div<TextProps>`
   color: ${p => p.theme.colors.white};
 
-  /* p */
+  /* body */
   ${p =>
-    p.variant === 'p' &&
+    p.variant === 'body' &&
     `
     font-size: 17px;
   `}

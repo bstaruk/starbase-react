@@ -3,12 +3,13 @@ import React from 'react';
 import { Wrapper } from './wrappers';
 
 export interface TextProps {
+  as?: React.ElementType;
   children: string | JSX.Element;
-  variant?: 'h1' | 'p';
+  variant?: 'h1' | 'body';
 }
 
-const Text = ({ children, variant = 'p' }: TextProps) => (
-  <Wrapper {...{ variant }}>{children}</Wrapper>
+const Text = ({ as, children, variant = 'body' }: TextProps) => (
+  <Wrapper {...{ as, variant }}>{children}</Wrapper>
 );
 
 export default Text;
