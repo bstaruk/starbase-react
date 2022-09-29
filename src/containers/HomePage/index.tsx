@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import Counter from 'components/Counter';
-import { Wrapper, HeadingWrapper } from './wrappers';
+import Text from 'components/Text';
+import { Wrapper } from './wrappers';
 
 const HomePage = () => (
   <>
@@ -11,7 +12,8 @@ const HomePage = () => (
     </Helmet>
 
     <Wrapper>
-      <HeadingWrapper>Hello World</HeadingWrapper>
+      <Text variant="h1">Hello World</Text>
+      <Text>Hello World</Text>
       <Counter />
     </Wrapper>
   </>
