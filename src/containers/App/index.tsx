@@ -8,7 +8,7 @@ import NotFoundPage from 'containers/NotFoundPage';
 const App = () => (
   <>
     <Helmet
-      titleTemplate="%s - starbase-react"
+      titleTemplate="%s | starbase-react"
       defaultTitle="starbase-react"
       htmlAttributes={{ lang: 'en-US' }}
     >

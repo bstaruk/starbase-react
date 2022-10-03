@@ -15,7 +15,7 @@ const HomePage = () => (
     <Wrapper>
       <HeaderWrapper>
         <Text as="h1" variant="h1">
-          starbase-react
+          starbase (react)
         </Text>
 
         <Text as="p">
