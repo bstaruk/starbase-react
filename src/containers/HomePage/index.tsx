@@ -23,8 +23,8 @@ const HomePage = () => (
             <Link href="https://github.com/bstaruk/starbase-react" target="_blank">
               starbase-react
             </Link>{' '}
-            is a TypeScript / React boilerplate, bootstrapped with CRA and sweetened with Redux
-            Toolkit, Redux-Saga, Emotion and more.
+            is a production-ready TypeScript / React boilerplate, bootstrapped with CRA and
+            sweetened with Redux Toolkit, Redux-Saga, Emotion and more.
           </>
         </Text>
       </HeaderWrapper>
