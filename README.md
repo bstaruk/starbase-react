@@ -3,7 +3,7 @@
 [![dependencies status](https://david-dm.org/bstaruk/starbase-react/status.svg)](https://david-dm.org/bstaruk/starbase-react)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbstaruk%2Fstarbase-react?ref=badge_shield)
 
-starbase-react is a Typescript, React, Redux-Toolkit & Emotion boilerplate. Brewed with [Create React App](https://github.com/facebook/create-react-app) ([v5.0.1](https://github.com/facebook/create-react-app/releases/tag/v5.0.1) w/ [TypeScript template](https://create-react-app.dev/docs/adding-typescript)), then sweetened with:
+starbase-react is a Typescript, React, Redux Toolkit & Emotion boilerplate. Brewed with [Create React App](https://github.com/facebook/create-react-app) ([v5.0.1](https://github.com/facebook/create-react-app/releases/tag/v5.0.1) w/ [TypeScript template](https://create-react-app.dev/docs/adding-typescript)), then sweetened with:
 
 - formatting via [EditorConfig](https://editorconfig.org) & [Prettier](https://prettier.io)
 - linting via & [ESLint](https://eslint.org)
