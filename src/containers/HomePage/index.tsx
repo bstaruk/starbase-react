@@ -14,10 +14,13 @@ const HomePage = () => (
     <Wrapper>
       <HeaderWrapper>
         <Text as="h1" variant="h1">
-          Hello World
+          starbase-react
         </Text>
 
-        <Text as="p">Hello World</Text>
+        <Text as="p">
+          starbase-react is a TypeScript / React boilerplate, bootstrapped with CRA and sweetened
+          with Redux Toolkit, Redux-Saga, Emotion and more.
+        </Text>
       </HeaderWrapper>
 
       <Counter />

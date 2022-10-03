@@ -9,8 +9,9 @@ export const Wrapper = styled.div`
 `;
 
 export const HeaderWrapper = styled.header`
+  max-width: 70ch;
+  margin: 0 auto 24px;
   text-align: center;
-  margin-bottom: 24px;
 
   > *:not(:last-child) {
     margin-bottom: 8px;
