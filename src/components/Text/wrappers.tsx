@@ -15,6 +15,6 @@ export const Wrapper = styled.div<TextProps>`
   ${p =>
     p.variant === 'h1' &&
     `
-    font-size: 40px;
+    font-size: 48px;
   `}
 `;
